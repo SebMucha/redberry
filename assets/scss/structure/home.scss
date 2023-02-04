@@ -1,0 +1,45 @@
+body{
+    overflow: none;
+}
+div.home{
+    height: 100vh;
+    width: 100%;
+    background-image: url("/redberry/assets/pics/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    img.Redberry{
+        position: absolute;
+        left: 70px;
+        top: 25px;
+    }
+    img.logo{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        left: 55%;
+        top: 55%;
+        transform: translate(-50%, -50%);
+    }
+    div.line{
+        position: absolute;
+        left: 70px;
+        right: 70px;
+        top: 90px;
+        border: 1px solid #1A1A1A;
+    }
+
+    button#redirect_button1{
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 18px 60px;
+        cursor: pointer;
+        position: absolute;
+        background: #1A1A1A; 
+        p.redirect_text{
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+    }
+}
