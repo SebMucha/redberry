@@ -70,6 +70,13 @@ div.hero1 {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+div.hero1 header {
+  width: 60%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 div.hero1 button#redirect_button2 {
   border-radius: 50%;
   width: 50px;
@@ -90,7 +97,7 @@ div.hero1 div.underline {
   left: 150px;
   top: 100px;
   border: 1px solid #1A1A1A;
-  width: calc(60% - 300px);
+  width: calc(100% - 300px);
 }
 div.hero1 p.hero_counter {
   position: absolute;

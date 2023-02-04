@@ -4,6 +4,13 @@ div.hero1{
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
+    header{
+        width: 60%;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     button#redirect_button2{
         border-radius: 50%;
         width: 50px;
@@ -25,7 +32,7 @@ div.hero1{
         left: 150px;
         top: 100px;
         border: 1px solid #1A1A1A;
-        width: calc(60% - 300px);
+        width: calc(100% - 300px);
     }
     p.hero_counter{
         position: absolute;
