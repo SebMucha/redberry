@@ -56,7 +56,7 @@ div.hero1{
             gap: 8px;
             div.left_form{
                 width: 40vh;
-                    form.myform_left input.fname{
+                    form#myform_left input.fname{
                     box-sizing: border-box;
                     background: #FFFFFF;
                     border: 1px solid #BCBCBC;
@@ -79,7 +79,7 @@ div.hero1{
             gap: 8px;
             div.right_form{
                 width: 40vh;
-                    form.myform_right input.lname{
+                    form#myform_right input.lname{
                     box-sizing: border-box;
                     background: #FFFFFF;
                     border: 1px solid #BCBCBC;
@@ -124,7 +124,7 @@ div.hero1{
         flex-direction: column;
         gap: 8px;
         padding: 20px 70px;
-        input{
+        input.about_me_input{
             box-sizing: border-box;
             height: 10vh;
             border: 1px solid #BCBCBC;
@@ -136,8 +136,7 @@ div.hero1{
         display: flex;
         flex-direction: column;
         gap: 8px;
-        padding: 20px 70px;
-        margin-bottom: 10px;
+        padding: 1px 70px;
         margin-top: 10px;
         input.email_input{
             box-sizing: border-box;
@@ -155,7 +154,7 @@ div.hero1{
         display: flex;
         flex-direction: column;
         gap: 8px;
-        padding: 20px 70px;
+        padding: 1px 70px;
         input.number_input{
             box-sizing: border-box;
             height: 5vh;
@@ -178,6 +177,7 @@ div.hero1{
         height: 50px;
         background: #6B40E3;
         border-radius: 4px;
+        cursor: pointer;
         p{
             letter-spacing: 0.08em;
             color: #FFFFFF;
@@ -186,3 +186,75 @@ div.hero1{
         }
     }
 }
+.logo-12{
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    left: 115vh;
+    top: 95vh;
+}
+.valid1{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 93%;
+    bottom: 35px;
+    display: none;
+}
+.invalid1{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 101%;
+    bottom: 35px;
+    display: none;
+}
+.valid2{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 93%;
+    bottom: 35px;
+    display: none;
+}
+.invalid2{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 101%;
+    bottom: 35px;
+    display: none;
+}
+.valid3{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 70px;
+    left: 95%;
+    display: none;
+}
+.invalid3{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 70px;
+    left: 101%;
+    display: none;
+}
+.valid4{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 70px;
+    left: 95%;
+    display: none;
+}
+.invalid4{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    bottom: 70px;
+    left: 101%;
+    display: none;
+}
+

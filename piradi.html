@@ -24,13 +24,15 @@
     </header>
         
 
-        <div class="inputfields">
+    <div class="inputfields">
             <div class="inputfield_left">
                 <h3>სახელი</h3>
-                <div class="left_form">
-                    <form class="myform_left">
+            <div class="left_form">
+                <form id="myform_left">
                     <input type="text" class="fname" name="fname" placeholder="ანზორ" minlength="2" ><br>
                 </form>
+                <img src="./assets/pics/valid.png" alt="" class="valid1">
+                <img src="./assets/pics/invalid.png" alt="" class="invalid1">
                 <p class="form_text">მინიმუმ 2 ასო, ქართული ასოები</p>
             </div>
         </div>
@@ -38,13 +40,15 @@
         <div class="inputfield_right">
                 <h3>გვარი</h3>
                 <div class="right_form">
-                <form class="myform_right">
+                <form id="myform_right">
                     <input type="text" class="lname" name="lname" placeholder="მუმლაძე" minlength="2"><br>
                 </form>
+                <img src="./assets/pics/valid.png" class="valid2" alt="">
+                <img src="./assets/pics/invalid.png" class="invalid2" alt="">
                 <p class="form_text">მინიმუმ 2 ასო, ქართული ასოები</p>
             </div>
         </div>
-        </div>
+    </div>
 
         <div class="img">
             <p class="photo_link">პირადი ფოტოს ატვირთვა</p>
@@ -62,19 +66,24 @@
         <div class="email">
             <p>ელ.ფოსტა</p>
             <input type="text" class="email_input" placeholder="anzorr666@redberry.ge">
-            <p class="email_text">უნდა მთავრდებოდეს @redbery.ge - თი</p>
+            <p class="email_text">უნდა მთავრდებოდეს @redberry.ge - თი</p>
+            <img src="./assets/pics/valid.png" class="valid3" alt="">
+            <img src="./assets/pics/invalid.png" class="invalid3" alt="">
         </div>
 
         <div class="number">
             <p>მობილურის ნომერი</p>
             <input type="text" class="number_input" placeholder="+995 551 12 34 56">
             <p class="number_text">უნდა აკმაყოფილებდეს ქართული მობილურის ნომრის ფორმატს</p>
+            <img src="./assets/pics/valid.png" alt="" class="valid4">
+            <img src="./assets/pics/invalid.png" class="invalid4" alt="">
         </div>
 
         <button id="redirect_button3">
             <p>შემდეგი</p>
         </button>
 </div>
+<img src="./assets/pics/LOGO-12 1.png" alt="" class="logo-12">
     <script src="./assets/javascript/piradi.js"></script>
 </body>
 </html>

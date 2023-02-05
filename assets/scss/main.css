@@ -146,7 +146,7 @@ div.hero1 div.inputfields div.inputfield_left {
 div.hero1 div.inputfields div.inputfield_left div.left_form {
   width: 40vh;
 }
-div.hero1 div.inputfields div.inputfield_left div.left_form form.myform_left input.fname {
+div.hero1 div.inputfields div.inputfield_left div.left_form form#myform_left input.fname {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #FFFFFF;
@@ -175,7 +175,7 @@ div.hero1 div.inputfields div.inputfield_right {
 div.hero1 div.inputfields div.inputfield_right div.right_form {
   width: 40vh;
 }
-div.hero1 div.inputfields div.inputfield_right div.right_form form.myform_right input.lname {
+div.hero1 div.inputfields div.inputfield_right div.right_form form#myform_right input.lname {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #FFFFFF;
@@ -223,7 +223,7 @@ div.hero1 div.about_me {
   gap: 8px;
   padding: 20px 70px;
 }
-div.hero1 div.about_me input {
+div.hero1 div.about_me input.about_me_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 10vh;
@@ -240,8 +240,7 @@ div.hero1 div.email {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  padding: 20px 70px;
-  margin-bottom: 10px;
+  padding: 1px 70px;
   margin-top: 10px;
 }
 div.hero1 div.email input.email_input {
@@ -265,7 +264,7 @@ div.hero1 div.number {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  padding: 20px 70px;
+  padding: 1px 70px;
 }
 div.hero1 div.number input.number_input {
   -webkit-box-sizing: border-box;
@@ -293,10 +292,91 @@ div.hero1 button#redirect_button3 {
   height: 50px;
   background: #6B40E3;
   border-radius: 4px;
+  cursor: pointer;
 }
 div.hero1 button#redirect_button3 p {
   letter-spacing: 0.08em;
   color: #FFFFFF;
   font-size: 16px;
   margin: 0 auto;
+}
+
+.logo-12 {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  left: 115vh;
+  top: 95vh;
+}
+
+.valid1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 93%;
+  bottom: 35px;
+  display: none;
+}
+
+.invalid1 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 101%;
+  bottom: 35px;
+  display: none;
+}
+
+.valid2 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 93%;
+  bottom: 35px;
+  display: none;
+}
+
+.invalid2 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 101%;
+  bottom: 35px;
+  display: none;
+}
+
+.valid3 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: 70px;
+  left: 95%;
+  display: none;
+}
+
+.invalid3 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: 70px;
+  left: 101%;
+  display: none;
+}
+
+.valid4 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: 70px;
+  left: 95%;
+  display: none;
+}
+
+.invalid4 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  bottom: 70px;
+  left: 101%;
+  display: none;
 }
