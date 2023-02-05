@@ -4,12 +4,14 @@ div.hero1{
     background-color: #f5f5f5;
     display: flex;
     flex-direction: column;
+    padding: 50px;
     header{
-        width: 60%;
+        width: 100%;
         height: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     button#redirect_button2{
         border-radius: 50%;
@@ -19,42 +21,41 @@ div.hero1{
         background: #FFFFFF;
         position: absolute;
         left: 45px;
-        top: 45px;
+        top: 60px;
     }
-    
+    div.cont{
+        width: 100%;
+    }
+    div.a{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5px 85px;
+    }
     h1.priv_info{
-        position: absolute;
-        left: 150px;
-        top: 50px;
+        margin-bottom: 15px;
+   
     }
     div.underline{
-        position: absolute;
-        left: 150px;
-        top: 100px;
-        border: 1px solid #1A1A1A;
-        width: calc(100% - 300px);
-    }
+        border: 1px solid #1A1A1A; 
+       }
     p.hero_counter{
-        position: absolute;
-        top: 60px;
-        left: calc(60% - 175px);
         font-size: 25px;
     }
 
     div.inputfields{
         display: flex;
         justify-content: center;
-        position: absolute;
-        top: 200px;
-        width: 60%;
-        gap: 60px;
+        margin-top: 35px;
+        margin-bottom: 50px;
+
         div.inputfield_left{
             display: flex;
             flex-direction: column;
             padding: 8px 24px;
             gap: 8px;
             div.left_form{
-                width: 370px;
+                width: 40vh;
                     form.myform_left input.fname{
                     box-sizing: border-box;
                     background: #FFFFFF;
@@ -77,7 +78,7 @@ div.hero1{
             padding: 8px 24px;
             gap: 8px;
             div.right_form{
-                width: 370px;
+                width: 40vh;
                     form.myform_right input.lname{
                     box-sizing: border-box;
                     background: #FFFFFF;
@@ -95,42 +96,94 @@ div.hero1{
             }
         }
     }
-}
+    div.img{
+        display: flex;
+        gap: 25px;
+        padding: 5px 70px;
+        margin-bottom: 40px;
+    }
+    
+    p.photo_link{
+        font-size: 18px;
+        color: #1A1A1A;
+    }
+    input#pic_upload{
+        display: none;
+    }
+    label{
+        padding: 10px 10px 12px;
+        color: white;
+        background: #0E80BF;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    
+    div.about_me{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 70px;
+        input{
+            box-sizing: border-box;
+            height: 10vh;
+            border: 1px solid #BCBCBC;
+            border-radius: 4px;
+            padding: 10px;
+        }
+    }
+    div.email{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 70px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        input.email_input{
+            box-sizing: border-box;
+            height: 5vh;
+            border: 1px solid #BCBCBC;
+            border-radius: 4px;
+            padding: 10px;
 
-
-p.photo_link{
-    position: absolute;
-    left: 150px;
-    top: 350px;
-    font-size: 18px;
-    color: #1A1A1A;
-}
-input#pic_upload{
-    display: none;
-}
-label{
-    padding: 10px 10px 12px;
-    position: absolute;
-    left: 400px;
-    top: 340px;
-    color: white;
-    background: #0E80BF;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-
-div.about_me{
-    // display: flex;
-    // flex-direction: column;
-    // align-items: flex-start;
-    // padding: 8px 24px;
-    // gap: 8px;
-    // position: absolute;
-    // width: 846px;
-    // height: 148px;
-    // left: calc(50% - 846px/2 - 411px);
-    // top: 393px;
-
-    width: 100px;
+        }
+        p.email_text{
+            color: #5d5b5b;
+            font-size: 14px;
+        }
+    }
+    div.number{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 20px 70px;
+        input.number_input{
+            box-sizing: border-box;
+            height: 5vh;
+            border: 1px solid #BCBCBC;
+            border-radius: 4px;
+            padding: 10px;
+        }
+        p.number_text{
+            color: #5d5b5b;
+            font-size: 14px;
+        }
+    }
+    button#redirect_button3{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 80vh;
+        bottom: 65px;
+        width: 150px;
+        height: 50px;
+        background: #6B40E3;
+        border-radius: 4px;
+        p{
+            letter-spacing: 0.08em;
+            color: #FFFFFF;
+            font-size: 16px;
+            margin: 0 auto;
+        }
+    }
 }

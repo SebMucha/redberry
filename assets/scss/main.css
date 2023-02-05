@@ -69,13 +69,24 @@ div.hero1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 50px;
 }
 div.hero1 header {
-  width: 60%;
+  width: 100%;
   height: 100px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 div.hero1 button#redirect_button2 {
   border-radius: 50%;
@@ -85,24 +96,30 @@ div.hero1 button#redirect_button2 {
   background: #FFFFFF;
   position: absolute;
   left: 45px;
-  top: 45px;
+  top: 60px;
+}
+div.hero1 div.cont {
+  width: 100%;
+}
+div.hero1 div.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 85px;
 }
 div.hero1 h1.priv_info {
-  position: absolute;
-  left: 150px;
-  top: 50px;
+  margin-bottom: 15px;
 }
 div.hero1 div.underline {
-  position: absolute;
-  left: 150px;
-  top: 100px;
   border: 1px solid #1A1A1A;
-  width: calc(100% - 300px);
 }
 div.hero1 p.hero_counter {
-  position: absolute;
-  top: 60px;
-  left: calc(60% - 175px);
   font-size: 25px;
 }
 div.hero1 div.inputfields {
@@ -112,10 +129,8 @@ div.hero1 div.inputfields {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  top: 200px;
-  width: 60%;
-  gap: 60px;
+  margin-top: 35px;
+  margin-bottom: 50px;
 }
 div.hero1 div.inputfields div.inputfield_left {
   display: -webkit-box;
@@ -129,7 +144,7 @@ div.hero1 div.inputfields div.inputfield_left {
   gap: 8px;
 }
 div.hero1 div.inputfields div.inputfield_left div.left_form {
-  width: 370px;
+  width: 40vh;
 }
 div.hero1 div.inputfields div.inputfield_left div.left_form form.myform_left input.fname {
   -webkit-box-sizing: border-box;
@@ -158,7 +173,7 @@ div.hero1 div.inputfields div.inputfield_right {
   gap: 8px;
 }
 div.hero1 div.inputfields div.inputfield_right div.right_form {
-  width: 370px;
+  width: 40vh;
 }
 div.hero1 div.inputfields div.inputfield_right div.right_form form.myform_right input.lname {
   -webkit-box-sizing: border-box;
@@ -175,30 +190,113 @@ div.hero1 div.inputfields div.inputfield_right p.form_text {
   line-height: 21px;
   color: #2E2E2E;
 }
-
-p.photo_link {
-  position: absolute;
-  left: 150px;
-  top: 350px;
+div.hero1 div.img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+  padding: 5px 70px;
+  margin-bottom: 40px;
+}
+div.hero1 p.photo_link {
   font-size: 18px;
   color: #1A1A1A;
 }
-
-input#pic_upload {
+div.hero1 input#pic_upload {
   display: none;
 }
-
-label {
+div.hero1 label {
   padding: 10px 10px 12px;
-  position: absolute;
-  left: 400px;
-  top: 340px;
   color: white;
   background: #0E80BF;
   border-radius: 4px;
   cursor: pointer;
 }
-
-div.about_me {
-  width: 100px;
+div.hero1 div.about_me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 20px 70px;
+}
+div.hero1 div.about_me input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 10vh;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  padding: 10px;
+}
+div.hero1 div.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 20px 70px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+div.hero1 div.email input.email_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 5vh;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  padding: 10px;
+}
+div.hero1 div.email p.email_text {
+  color: #5d5b5b;
+  font-size: 14px;
+}
+div.hero1 div.number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 20px 70px;
+}
+div.hero1 div.number input.number_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 5vh;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  padding: 10px;
+}
+div.hero1 div.number p.number_text {
+  color: #5d5b5b;
+  font-size: 14px;
+}
+div.hero1 button#redirect_button3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 80vh;
+  bottom: 65px;
+  width: 150px;
+  height: 50px;
+  background: #6B40E3;
+  border-radius: 4px;
+}
+div.hero1 button#redirect_button3 p {
+  letter-spacing: 0.08em;
+  color: #FFFFFF;
+  font-size: 16px;
+  margin: 0 auto;
 }
