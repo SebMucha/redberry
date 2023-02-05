@@ -1,4 +1,4 @@
 document.querySelector('#redirect_button2')
 .addEventListener('click', () => {
-    window.location.href = 'home.html'
+    window.location.href = 'index.html'
 });
