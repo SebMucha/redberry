@@ -58,8 +58,14 @@ div.home button#redirect_button1 p.redirect_text {
   color: #FFFFFF;
 }
 
-div.hero1 {
-  width: 60%;
+div.whole {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% 40%;
+  grid-template-columns: 60% 40%;
+}
+
+div.whole div.hero1 {
   height: 100vh;
   background-color: #f5f5f5;
   display: -webkit-box;
@@ -71,8 +77,7 @@ div.hero1 {
           flex-direction: column;
   padding: 50px;
 }
-div.hero1 header {
-  width: 100%;
+div.whole div.hero1 header {
   height: 100px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -88,7 +93,7 @@ div.hero1 header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-div.hero1 button#redirect_button2 {
+div.whole div.hero1 button#redirect_button2 {
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -98,10 +103,10 @@ div.hero1 button#redirect_button2 {
   left: 45px;
   top: 60px;
 }
-div.hero1 div.cont {
+div.whole div.hero1 div.cont {
   width: 100%;
 }
-div.hero1 div.a {
+div.whole div.hero1 div.a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -113,16 +118,16 @@ div.hero1 div.a {
           justify-content: space-between;
   padding: 5px 85px;
 }
-div.hero1 h1.priv_info {
+div.whole div.hero1 h1.priv_info {
   margin-bottom: 15px;
 }
-div.hero1 div.underline {
+div.whole div.hero1 div.underline {
   border: 1px solid #1A1A1A;
 }
-div.hero1 p.hero_counter {
+div.whole div.hero1 p.hero_counter {
   font-size: 25px;
 }
-div.hero1 div.inputfields {
+div.whole div.hero1 div.inputfields {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,7 +137,7 @@ div.hero1 div.inputfields {
   margin-top: 35px;
   margin-bottom: 50px;
 }
-div.hero1 div.inputfields div.inputfield_left {
+div.whole div.hero1 div.inputfields div.inputfield_left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,10 +148,10 @@ div.hero1 div.inputfields div.inputfield_left {
   padding: 8px 24px;
   gap: 8px;
 }
-div.hero1 div.inputfields div.inputfield_left div.left_form {
+div.whole div.hero1 div.inputfields div.inputfield_left div.left_form {
   width: 40vh;
 }
-div.hero1 div.inputfields div.inputfield_left div.left_form form#myform_left input.fname {
+div.whole div.hero1 div.inputfields div.inputfield_left div.left_form form#myform_left input.fname {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #FFFFFF;
@@ -156,12 +161,12 @@ div.hero1 div.inputfields div.inputfield_left div.left_form form#myform_left inp
   height: 100%;
   padding: 15px;
 }
-div.hero1 div.inputfields div.inputfield_left p.form_text {
+div.whole div.hero1 div.inputfields div.inputfield_left p.form_text {
   font-size: 14px;
   line-height: 21px;
   color: #2E2E2E;
 }
-div.hero1 div.inputfields div.inputfield_right {
+div.whole div.hero1 div.inputfields div.inputfield_right {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,10 +177,10 @@ div.hero1 div.inputfields div.inputfield_right {
   padding: 8px 24px;
   gap: 8px;
 }
-div.hero1 div.inputfields div.inputfield_right div.right_form {
+div.whole div.hero1 div.inputfields div.inputfield_right div.right_form {
   width: 40vh;
 }
-div.hero1 div.inputfields div.inputfield_right div.right_form form#myform_right input.lname {
+div.whole div.hero1 div.inputfields div.inputfield_right div.right_form form#myform_right input.lname {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #FFFFFF;
@@ -185,12 +190,12 @@ div.hero1 div.inputfields div.inputfield_right div.right_form form#myform_right 
   height: 100%;
   padding: 15px;
 }
-div.hero1 div.inputfields div.inputfield_right p.form_text {
+div.whole div.hero1 div.inputfields div.inputfield_right p.form_text {
   font-size: 14px;
   line-height: 21px;
   color: #2E2E2E;
 }
-div.hero1 div.img {
+div.whole div.hero1 div.img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,21 +203,21 @@ div.hero1 div.img {
   padding: 5px 70px;
   margin-bottom: 40px;
 }
-div.hero1 p.photo_link {
+div.whole div.hero1 p.photo_link {
   font-size: 18px;
   color: #1A1A1A;
 }
-div.hero1 input#pic_upload {
+div.whole div.hero1 input#pic_upload {
   display: none;
 }
-div.hero1 label {
+div.whole div.hero1 label {
   padding: 10px 10px 12px;
   color: white;
   background: #0E80BF;
   border-radius: 4px;
   cursor: pointer;
 }
-div.hero1 div.about_me {
+div.whole div.hero1 div.about_me {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -223,7 +228,7 @@ div.hero1 div.about_me {
   gap: 8px;
   padding: 20px 70px;
 }
-div.hero1 div.about_me input.about_me_input {
+div.whole div.hero1 div.about_me input.about_me_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 10vh;
@@ -231,7 +236,7 @@ div.hero1 div.about_me input.about_me_input {
   border-radius: 4px;
   padding: 10px;
 }
-div.hero1 div.email {
+div.whole div.hero1 div.email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,7 +248,7 @@ div.hero1 div.email {
   padding: 1px 70px;
   margin-top: 10px;
 }
-div.hero1 div.email input.email_input {
+div.whole div.hero1 div.email input.email_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 5vh;
@@ -251,11 +256,11 @@ div.hero1 div.email input.email_input {
   border-radius: 4px;
   padding: 10px;
 }
-div.hero1 div.email p.email_text {
+div.whole div.hero1 div.email p.email_text {
   color: #5d5b5b;
   font-size: 14px;
 }
-div.hero1 div.number {
+div.whole div.hero1 div.number {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -264,9 +269,9 @@ div.hero1 div.number {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 8px;
-  padding: 1px 70px;
+  padding: 35px 70px;
 }
-div.hero1 div.number input.number_input {
+div.whole div.hero1 div.number input.number_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 5vh;
@@ -274,11 +279,11 @@ div.hero1 div.number input.number_input {
   border-radius: 4px;
   padding: 10px;
 }
-div.hero1 div.number p.number_text {
+div.whole div.hero1 div.number p.number_text {
   color: #5d5b5b;
   font-size: 14px;
 }
-div.hero1 button#redirect_button3 {
+div.whole div.hero1 button#redirect_button3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,7 +299,7 @@ div.hero1 button#redirect_button3 {
   border-radius: 4px;
   cursor: pointer;
 }
-div.hero1 button#redirect_button3 p {
+div.whole div.hero1 button#redirect_button3 p {
   letter-spacing: 0.08em;
   color: #FFFFFF;
   font-size: 16px;
@@ -303,9 +308,6 @@ div.hero1 button#redirect_button3 p {
 
 .logo-12 {
   position: absolute;
-  width: 42px;
-  height: 42px;
-  left: 115vh;
   top: 95vh;
 }
 
@@ -379,4 +381,58 @@ div.hero1 button#redirect_button3 p {
   bottom: 70px;
   left: 101%;
   display: none;
+}
+
+div.resume {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 60px;
+}
+div.resume div.resume_top {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #C8C8C8;
+}
+div.resume div.resume_top div.full_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  color: #F93B1D;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 42px;
+}
+div.resume div.resume_top div.mail_num {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+div.resume div.resume_top p.chem_shesaxeb_teqsti {
+  max-width: 60%;
+}
+div.resume img.priv_pic {
+  position: absolute;
+  width: 246px;
+  height: 246px;
+  right: 40px;
+  top: 45px;
+  border-radius: 133px;
 }
