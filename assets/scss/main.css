@@ -18,9 +18,6 @@ div.home {
   height: 100vh;
   width: 100%;
   background-image: url("/assets/pics/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 div.home img.Redberry {
   position: absolute;
@@ -383,6 +380,33 @@ div.whole div.hero1 button#redirect_button3 p {
   display: none;
 }
 
+.valid5 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: -20px;
+  left: 110px;
+  display: none;
+}
+
+.invalid5 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top: 5px;
+  display: none;
+}
+
+.valid6 {
+  width: 20px;
+  height: 20px;
+}
+
+.invalid6 {
+  width: 20px;
+  height: 20px;
+}
+
 div.resume {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,4 +459,98 @@ div.resume img.priv_pic {
   right: 40px;
   top: 45px;
   border-radius: 133px;
+}
+div.resume .chem_shesaxeb {
+  display: none;
+  color: #F93B1D;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+div.hero2 {
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+}
+div.hero2 header {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+div.hero2 button#redirect_button4 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: #FFFFFF;
+  position: absolute;
+  left: 45px;
+  top: 60px;
+}
+div.hero2 div.cont {
+  width: 100%;
+}
+div.hero2 div.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 85px;
+}
+div.hero2 h1.priv_info {
+  margin-bottom: 15px;
+}
+div.hero2 div.underline {
+  border: 1px solid #1A1A1A;
+}
+div.hero2 p.hero_counter {
+  font-size: 25px;
+}
+div.hero2 div.tanamdeboba {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 75px;
+  gap: 8px;
+}
+div.hero2 div.tanamdeboba div.tanamdeboba_div {
+  width: 100%;
+}
+div.hero2 div.tanamdeboba div.tanamdeboba_div form input.tanamdeboba_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
 }

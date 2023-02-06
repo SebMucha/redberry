@@ -6,10 +6,13 @@ localStorage.removeItem("email");
 localStorage.removeItem("number");
 localStorage.removeItem("aboutMe");
 localStorage.removeItem("pic");
+localStorage.removeItem("aboutMeInput");
+localStorage.removeItem("validationResult");
+valid5.style.display = 'none';
+invalid5.style.display = 'none';
+
 window.location.href = 'index.html'
 });
-
-
 let form = document.querySelector("#myform_left");
 let fnameInput = document.querySelector(".fname");
 let form2 = document.querySelector("#myform_right");
@@ -26,13 +29,16 @@ let invalid3 = document.querySelector('.invalid3');
 let valid3 = document.querySelector('.valid3');
 let invalid4 = document.querySelector('.invalid4');
 let valid4 = document.querySelector('.valid4');
+let invalid5 = document.querySelector('.invalid5');
+let valid5 = document.querySelector('.valid5');
 let redirectButton = document.querySelector("#redirect_button3");
+let chemShesaxeb = document.querySelector(".chem_shesaxeb")
 
 fnameInput.addEventListener("input", validateForm1);
 lnameInput.addEventListener("input", validateForm2);
 emailInput.addEventListener("input", validateForm3);
 numberInput.addEventListener("input", validateForm4);
-
+picUpload.addEventListener("input", validateForm5);
 
 // form validator
 function validateForm1() {
@@ -85,6 +91,23 @@ function validateForm4() {
     numberInput.style.borderColor = "green";
     }
 }    
+function validateForm5() {
+    let file = picUpload.files[0];
+    let fileType = file.type;
+  
+    if (!fileType.match(/image\/(png|jpg)/)) {
+      invalid5.style.display = 'block';
+      valid5.style.display = 'none';
+      localStorage.setItem("validationResult", "invalid");
+      return;
+    } else {
+      valid5.style.display = 'block';
+      invalid5.style.display = 'none';
+      localStorage.setItem("validationResult", "valid");
+    }
+  }
+  
+
 // validates info on input, stores to local storage and pushes to cv
 fnameInput.addEventListener("input", function() {
     localStorage.setItem("fname", fnameInput.value);
@@ -120,6 +143,16 @@ fnameInput.addEventListener("input", function() {
     let aboutMe = aboutMeInput.value;
     document.querySelector(".chem_shesaxeb_teqsti").textContent = aboutMe;
     localStorage.setItem("aboutMe", aboutMe);
+
+    if (aboutMeInput.value === "") {
+      chemShesaxeb.style.display = "none";
+      localStorage.removeItem("aboutMeInput");
+      } else {
+      chemShesaxeb.style.display = "block";
+      localStorage.setItem("aboutMeInput", aboutMeInput.value);
+      }
+    
+
   });
   picUpload.addEventListener("change", function () {
     const privPic = document.querySelector(".priv_pic");
@@ -148,7 +181,23 @@ fnameInput.addEventListener("input", function() {
       if (numberInput.value) {
         validateForm4();
       }
+
+      if (localStorage.getItem("aboutMeInput")) {
+        aboutMeInput.value = localStorage.getItem("aboutMeInput");
+        chemShesaxeb.style.display = "block";
+        } else {
+        chemShesaxeb.style.display = "none";
+        }
+
+      let validationResult = localStorage.getItem("validationResult");
+      if (validationResult === "valid") {
+        valid5.style.display = 'block';
+        invalid5.style.display = 'none';
+      } else if (validationResult === "invalid") {
+        invalid5.style.display = 'block';
+        valid5.style.display = 'none';}
   });
+
 
 //   cv info save on reload
   window.addEventListener("load", function () {
@@ -164,11 +213,22 @@ fnameInput.addEventListener("input", function() {
     emailInput.value = email;
     numberInput.value = number;
     aboutMeInput.value = aboutMe;
-    document.querySelector(".priv_pic").src = pic;
 
+    document.querySelector(".priv_pic").src = pic;
     document.querySelector(".saxeli").textContent = fname;
     document.querySelector(".gvari").textContent = lname;
     document.querySelector(".emaili").textContent = email;
     document.querySelector(".nomeri").textContent = number;
     document.querySelector(".chem_shesaxeb_teqsti").textContent = aboutMe;
 });
+
+redirectButton.addEventListener("click", function() {
+  if (valid1.style.display === "block" && valid2.style.display === "block" &&
+  valid3.style.display === "block" && valid4.style.display === "block" &&
+  valid5.style.display === "block") {
+  window.location.href = "experience.html";
+  }
+  else{
+    alert('must validly complete form ')
+  }
+  });

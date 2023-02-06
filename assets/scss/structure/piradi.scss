@@ -256,6 +256,29 @@ div.whole div.hero1{
     left: 101%;
     display: none;
 }
+.valid5{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -20px;
+    left: 110px;
+    display: none;
+}
+.invalid5{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 5px;
+    display: none;
+}
+.valid6{
+    width: 20px;
+    height: 20px;
+}
+.invalid6{
+    width: 20px;
+    height: 20px;
+}
 
 div.resume{
     display: flex;
@@ -293,4 +316,13 @@ div.resume{
         top: 45px;
         border-radius: 133px;
     }
+    .chem_shesaxeb{
+        display: none;
+        color: #F93B1D;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+
+    }
+
 }
