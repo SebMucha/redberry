@@ -192,93 +192,80 @@ div.whole div.hero1{
     position: absolute;
     top: 95vh;
 }
-.valid1{
+.valid1, .valid2, .valid3, .valid4, .valid5, .valid6, .valid7, .valid8{
     width: 20px;
     height: 20px;
     position: relative;
+    display: none;
+    }
+
+.invalid1, .invalid2, .invalid3, .invalid4, .invalid5, .invalid6, .invalid7 .invalid8 {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    display: none;
+}
+    .valid1 {
     left: 93%;
     bottom: 35px;
-    display: none;
-}
-.invalid1{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .invalid1 {
     left: 101%;
     bottom: 35px;
-    display: none;
-}
-.valid2{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .valid2 {
     left: 93%;
     bottom: 35px;
-    display: none;
-}
-.invalid2{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .invalid2 {
     left: 101%;
     bottom: 35px;
-    display: none;
-}
-.valid3{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .valid3 {
     bottom: 70px;
     left: 95%;
-    display: none;
-}
-.invalid3{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .invalid3 {
     bottom: 70px;
     left: 101%;
-    display: none;
-}
-.valid4{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .valid4 {
     bottom: 70px;
     left: 95%;
-    display: none;
-}
-.invalid4{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .invalid4 {
     bottom: 70px;
     left: 101%;
-    display: none;
-}
-.valid5{
-    width: 20px;
-    height: 20px;
-    position: relative;
+    }
+    
+    .valid5 {
     top: -20px;
     left: 110px;
-    display: none;
-}
-.invalid5{
-    width: 20px;
-    height: 20px;
+    }
+    
+    .invalid5 {
+    top: -20px;
+    left: 100%;
+    }
+    
+    .valid6, .valid7, .valid8{
+    left: 95%;
+    top: -35px;
+    }
+    
+    .invalid6, .invalid7, .invalid8 {
+    left: 101%;
+    top: -35px;
     position: relative;
-    top: 5px;
     display: none;
-}
-.valid6{
-    width: 20px;
-    height: 20px;
-}
-.invalid6{
-    width: 20px;
-    height: 20px;
-}
+    }
 
 div.resume{
     display: flex;

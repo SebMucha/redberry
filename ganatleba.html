@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gamocdileba Resume</title>
+    <title>Ganatleba</title>
     <link rel="stylesheet" href="./assets/scss/main.css" />
   </head>
   <body>
@@ -16,60 +16,49 @@
           </button>
           <div class="cont">
             <div class="a">
-              <h1 class="priv_info">გამოცდილება</h1>
-              <p class="hero_counter">2/3</p>
+              <h1 class="priv_info">განათლება</h1>
+              <p class="hero_counter">3/3</p>
             </div>
             <div class="underline"></div>
           </div>
         </header>
 
-        <div class="scroll_div">
+        <div class="scroll_div2">
           <div class="tanamdeboba">
-            <h3>თანამდებობა</h3>
+            <h3>სასწავლებელი</h3>
             <div class="tanamdeboba_div">
               <form>
                 <input
                   type="text"
-                  class="tanamdeboba_input"
+                  class="saswavlebeli_input"
                   name="tanamdeboba_text"
                   placeholder="დეველოპერი, დიზაინერი, ა.შ."
                   minlength="2"
                 /><br />
               </form>
-              <img src="./assets/pics/valid.png" alt="" class="valid6" />
-              <img src="./assets/pics/invalid.png" alt="" class="invalid6" />
+              <img src="./assets/pics/valid.png" alt="" class="valid8" />
+              <img src="./assets/pics/invalid.png" alt="" class="invalid8" />
               <p class="tanamdeboba_text">მინიმუმ 2 სიმბოლო</p>
-            </div>
-          </div>
-
-          <div class="damsaqmebeli">
-            <h3>დამსაქმებელი</h3>
-            <div class="damsaqmebeli_div">
-              <form>
-                <input
-                  type="text"
-                  class="damsaqmebeli_input"
-                  name="damsaqmebeli_text"
-                  placeholder="დამსაქმებელი"
-                  minlength="2"
-                /><br />
-              </form>
-              <img src="./assets/pics/valid.png" alt="" class="valid7" />
-              <img src="./assets/pics/invalid.png" alt="" class="invalid7" />
-              <p class="damsaqmebeli_text">მინიმუმ 2 სიმბოლო</p>
             </div>
           </div>
 
           <div class="calendars">
             <div class="calendars_left">
-              <h3>დაწყების რიცხვი</h3>
+              <h3>ხარისხი</h3>
               <div class="left_calendar">
                 <form id="left_calendar_form">
-                  <input
-                    type="date"
-                    class="dawyebis_ricxvi"
-                    name="dawyebis_ricxvi"
-                  /><br />
+                  <select id="xarisxi">
+                    <option value="">აირჩიეთ ხარისხი</option>
+                    <option value="">საშუალო სკოლის დიპლომი</option>
+                    <option value="">ზოგადსაგანმანათლებლო დიპლომი</option>
+                    <option value="">ბაკალავრი</option>
+                    <option value="">მაგისტრი</option>
+                    <option value="">დოქტორი</option>
+                    <option value="">ასოცირებული ხარისხი</option>
+                    <option value="">სტუდენტი</option>
+                    <option value="">კოლეჯი (ხარისხის გარეშე)</option>
+                    <option value="">სხვა</option>
+                  </select>
                 </form>
               </div>
             </div>
@@ -80,7 +69,7 @@
                 <form id="right_calendar_form">
                   <input
                     type="date"
-                    class="damtavrebis_ricxvi"
+                    class="damtavrebis_ricxvi2"
                     name="damtavrebis_ricxvi"
                   /><br />
                 </form>
@@ -92,8 +81,8 @@
             <p>აღწერა</p>
             <input
               type="text"
-              class="agwera_input"
-              placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+              class="agwera_input2"
+              placeholder="განათლების აღწერა"
             />
           </div>
         </div>
@@ -106,7 +95,7 @@
           </button>
         </div>
 
-        <div class="two_buttons">
+        <div class="two_buttons2">
           <button class="back_redirect">უკან</button>
           <button class="next_redirect">შემდეგი</button>
         </div>
@@ -141,8 +130,19 @@
           </div>
           <p class="agwera_text"></p>
         </div>
+
+        <div class="resume_bottom">
+          <h2>განათლება</h2>
+          <div class="degree">
+            <h4 class="saswavlebeli_text"></h4>
+            <h4 class="xarisxi_text"></h4>
+          </div>
+          <p class="finish_date"></p>
+          <p class="ganatlebis_agwera_text"></p>
+        </div>
       </div>
     </div>
-    <script src="./assets/javascript/experience.js"></script>
+
+    <script src="./assets/javascript/ganatleba.js"></script>
   </body>
 </html>

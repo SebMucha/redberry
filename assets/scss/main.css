@@ -10,6 +10,368 @@
   font-family: "Helvetica Neue";
 }
 
+input.saswavlebeli_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+div.resume_bottom h2 {
+  color: #F93B1D;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+div.resume_bottom div.degree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+div.resume_bottom p.finish_date {
+  color: #909090;
+  margin-bottom: 20px;
+}
+
+div.hero2 {
+  height: 100vh;
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 50px;
+}
+div.hero2 header {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 5px 70px;
+  margin-bottom: 50px;
+}
+div.hero2 button#redirect_button4 {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  background: #FFFFFF;
+  position: absolute;
+  left: 45px;
+  top: 60px;
+}
+div.hero2 div.cont {
+  width: 100%;
+}
+div.hero2 div.a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px 85px;
+}
+div.hero2 h1.priv_info {
+  margin-bottom: 15px;
+}
+div.hero2 div.underline {
+  border: 1px solid #1A1A1A;
+}
+div.hero2 p.hero_counter {
+  font-size: 25px;
+}
+div.hero2 div.tanamdeboba {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 75px;
+  gap: 8px;
+}
+div.hero2 div.tanamdeboba div.tanamdeboba_div {
+  width: 100%;
+}
+div.hero2 div.tanamdeboba div.tanamdeboba_div form input.tanamdeboba_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+div.damsaqmebeli {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 8px 75px;
+  gap: 8px;
+  margin-top: 25px;
+}
+div.damsaqmebeli div.damsaqmebeli_div {
+  width: 100%;
+}
+div.damsaqmebeli div.damsaqmebeli_div input.damsaqmebeli_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+div.calendars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  gap: 45px;
+}
+div.calendars div.calendars_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+div.calendars div.calendars_left div.left_calendar {
+  width: 40vh;
+}
+div.calendars div.calendars_left div.left_calendar input.dawyebis_ricxvi {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+div.calendars div.calendars_right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+}
+div.calendars div.calendars_right div.right_calendar {
+  width: 40vh;
+}
+div.calendars div.calendars_right div.right_calendar input.damtavrebis_ricxvi, div.calendars div.calendars_right div.right_calendar .damtavrebis_ricxvi2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+div.agwera {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding: 5px 70px;
+}
+div.agwera input.agwera_input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 10vh;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+div.experience_underline {
+  margin-top: 15px;
+  border: 1px solid #BCBCBC;
+  width: 85%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+button.meti_gamocdileba_button {
+  padding: 18px 60px;
+  background: #68a5eb;
+  margin-left: 75px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: white;
+  border: #68a5eb;
+  cursor: pointer;
+}
+
+div.two_buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 75px;
+  margin-top: 90px;
+}
+
+button.back_redirect {
+  background: #6B40E3;
+  border-radius: 4px;
+  color: white;
+  height: 50px;
+  padding: 18px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button.next_redirect {
+  background: #6B40E3;
+  border-radius: 4px;
+  color: white;
+  height: 50px;
+  padding: 18px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tanamdeboba_text, .damsaqmebeli_text {
+  font-size: 14px;
+  color: #909090;
+}
+
+div.resume_mid {
+  margin-top: 15px;
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #C8C8C8;
+}
+div.resume_mid h3.gamocdileba_text {
+  font-size: 18px;
+  line-height: 22px;
+  color: #F93B1D;
+}
+div.resume_mid div.dasaqmeba {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+div.resume_mid div.dates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #909090;
+  gap: 5px;
+}
+
+div.scroll_div {
+  height: 60vh;
+  overflow-y: auto;
+}
+
+select#xarisxi {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.agwera_input2 {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 10vh;
+  border: 1px solid #BCBCBC;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+div.scroll_div2 {
+  height: 40vh;
+  overflow-y: auto;
+}
+
+div.two_buttons2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 75px;
+  margin-top: 180px;
+}
+
 body {
   overflow: none;
 }
@@ -308,103 +670,80 @@ div.whole div.hero1 button#redirect_button3 p {
   top: 95vh;
 }
 
-.valid1 {
+.valid1, .valid2, .valid3, .valid4, .valid5, .valid6, .valid7, .valid8 {
   width: 20px;
   height: 20px;
   position: relative;
+  display: none;
+}
+
+.invalid1, .invalid2, .invalid3, .invalid4, .invalid5, .invalid6, .invalid7 .invalid8 {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: none;
+}
+
+.valid1 {
   left: 93%;
   bottom: 35px;
-  display: none;
 }
 
 .invalid1 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   left: 101%;
   bottom: 35px;
-  display: none;
 }
 
 .valid2 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   left: 93%;
   bottom: 35px;
-  display: none;
 }
 
 .invalid2 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   left: 101%;
   bottom: 35px;
-  display: none;
 }
 
 .valid3 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   bottom: 70px;
   left: 95%;
-  display: none;
 }
 
 .invalid3 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   bottom: 70px;
   left: 101%;
-  display: none;
 }
 
 .valid4 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   bottom: 70px;
   left: 95%;
-  display: none;
 }
 
 .invalid4 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   bottom: 70px;
   left: 101%;
-  display: none;
 }
 
 .valid5 {
-  width: 20px;
-  height: 20px;
-  position: relative;
   top: -20px;
   left: 110px;
-  display: none;
 }
 
 .invalid5 {
-  width: 20px;
-  height: 20px;
+  top: -20px;
+  left: 100%;
+}
+
+.valid6, .valid7, .valid8 {
+  left: 95%;
+  top: -35px;
+}
+
+.invalid6, .invalid7, .invalid8 {
+  left: 101%;
+  top: -35px;
   position: relative;
-  top: 5px;
   display: none;
-}
-
-.valid6 {
-  width: 20px;
-  height: 20px;
-}
-
-.invalid6 {
-  width: 20px;
-  height: 20px;
 }
 
 div.resume {
@@ -466,91 +805,4 @@ div.resume .chem_shesaxeb {
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
-}
-
-div.hero2 {
-  height: 100vh;
-  background-color: #f5f5f5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 50px;
-}
-div.hero2 header {
-  height: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-div.hero2 button#redirect_button4 {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  background: #FFFFFF;
-  position: absolute;
-  left: 45px;
-  top: 60px;
-}
-div.hero2 div.cont {
-  width: 100%;
-}
-div.hero2 div.a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 5px 85px;
-}
-div.hero2 h1.priv_info {
-  margin-bottom: 15px;
-}
-div.hero2 div.underline {
-  border: 1px solid #1A1A1A;
-}
-div.hero2 p.hero_counter {
-  font-size: 25px;
-}
-div.hero2 div.tanamdeboba {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 8px 75px;
-  gap: 8px;
-}
-div.hero2 div.tanamdeboba div.tanamdeboba_div {
-  width: 100%;
-}
-div.hero2 div.tanamdeboba div.tanamdeboba_div form input.tanamdeboba_input {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background: #FFFFFF;
-  border: 1px solid #BCBCBC;
-  border-radius: 4px;
-  width: 100%;
-  height: 100%;
-  padding: 15px;
 }

@@ -1,0 +1,10 @@
+div.resume_bottom h2 {
+  color: #F93B1D;
+  font-size: 18px;
+  line-height: 22px;
+}
+div.resume_bottom div.degree {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}

@@ -1,0 +1,45 @@
+// <div class="resume_bottom">
+//           <h2>განათლება</h2>
+//           <div class="degree">
+//             <h4 class="saswavlebeli_text">
+//               წმ. ანდრიას საპატრიარქოს სასწავლებელი,
+//             </h4>
+//             <h4 class="xarisxi_text">სტუდენტი</h4>
+//           </div>
+//           <p class="finish_date">2020-09-09</p>
+//           <p class="ganatlebis_agwera_text">
+//             ვსწავლობდი გულმოდგინეთ. მყავდა ფრიადები. რაც შემეძლო — ვქენი.
+//             კომპიუტერები მიყვარდა. ვიჯექი ჩემთვის, ვაკაკუნებდი ამ კლავიშებზე.
+//             მეუნებოდნენ — დაჯექი, წაიკითხე რამე, რას აკაკუნებ, დრო მოვა და
+//             ჩაგიკაკუნებსო. აჰა, მოვიდა დრო და ვერა ვარ დეველოპერი?
+//           </p>
+//         </div>
+//       </div>
+input.saswavlebeli_input{
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #BCBCBC;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+
+}
+div.resume_bottom{
+    h2{
+        color: #F93B1D;
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+    div.degree{
+        display: flex;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+    p.finish_date{
+        color: #909090;
+        margin-bottom: 20px;
+    }
+}
