@@ -136,20 +136,21 @@ div.agwera{
     flex-direction: column;
     gap: 8px;
     padding: 5px 70px;
-    input.agwera_input{
+    textarea.agwera_input{
         box-sizing: border-box;
         height: 10vh;
         border: 1px solid #BCBCBC;
         border-radius: 4px;
         padding: 10px;
+        resize:none;
     }
 }
 
 div.experience_underline{
-    margin-top: 15px;
+    margin-top: 20px;
+
     border: 1px solid #BCBCBC; 
-    width: 85%;
-    align-self: center;
+
 }
 button.meti_gamocdileba_button{
     padding: 18px 60px;
@@ -195,15 +196,22 @@ button.next_redirect{
 div.resume_mid{
     margin-top: 15px;
     height: 30%;
+    border-bottom: 1px solid #C8C8C8;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-bottom: 1px solid #C8C8C8;
+    div.mid_single_resume{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+    }
     
     h3.gamocdileba_text{
         font-size: 18px;
         line-height: 22px;  
         color: #F93B1D;
+        margin-bottom: 10px;
     }
     div.dasaqmeba{
         display: flex;
@@ -212,11 +220,14 @@ div.resume_mid{
         display: flex;
         color: #909090;
         gap: 5px;
+        margin-top: 5px;
+        margin-bottom: 15px;
     }
 }
 
-div.scroll_div{
-    height: 60vh;
+
+div.scroll_div_parent{
+    height: 70vh;
     overflow-y: auto;
 }
 
@@ -238,6 +249,7 @@ select#xarisxi{
     border: 1px solid #BCBCBC;
     border-radius: 4px;
     padding: 10px;
+    resize: none;
 }
 
 div.scroll_div2{

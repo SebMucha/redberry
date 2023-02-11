@@ -23,82 +23,84 @@
           </div>
         </header>
 
-        <div class="scroll_div">
-          <div class="tanamdeboba">
-            <h3>თანამდებობა</h3>
-            <div class="tanamdeboba_div">
-              <form>
-                <input
-                  type="text"
-                  class="tanamdeboba_input"
-                  name="tanamdeboba_text"
-                  placeholder="დეველოპერი, დიზაინერი, ა.შ."
-                  minlength="2"
-                /><br />
-              </form>
-              <img src="./assets/pics/valid.png" alt="" class="valid6" />
-              <img src="./assets/pics/invalid.png" alt="" class="invalid6" />
-              <p class="tanamdeboba_text">მინიმუმ 2 სიმბოლო</p>
-            </div>
-          </div>
-
-          <div class="damsaqmebeli">
-            <h3>დამსაქმებელი</h3>
-            <div class="damsaqmebeli_div">
-              <form>
-                <input
-                  type="text"
-                  class="damsaqmebeli_input"
-                  name="damsaqmebeli_text"
-                  placeholder="დამსაქმებელი"
-                  minlength="2"
-                /><br />
-              </form>
-              <img src="./assets/pics/valid.png" alt="" class="valid7" />
-              <img src="./assets/pics/invalid.png" alt="" class="invalid7" />
-              <p class="damsaqmebeli_text">მინიმუმ 2 სიმბოლო</p>
-            </div>
-          </div>
-
-          <div class="calendars">
-            <div class="calendars_left">
-              <h3>დაწყების რიცხვი</h3>
-              <div class="left_calendar">
-                <form id="left_calendar_form">
+        <div class="scroll_div_parent">
+          <div class="scroll_div">
+            <div class="tanamdeboba">
+              <h3>თანამდებობა</h3>
+              <div class="tanamdeboba_div">
+                <form>
                   <input
-                    type="date"
-                    class="dawyebis_ricxvi"
-                    name="dawyebis_ricxvi"
+                    type="text"
+                    class="tanamdeboba_input"
+                    name="tanamdeboba_text"
+                    placeholder="დეველოპერი, დიზაინერი, ა.შ."
+                    minlength="2"
                   /><br />
                 </form>
+                <img src="./assets/pics/valid.png" alt="" class="valid6" />
+                <img src="./assets/pics/invalid.png" alt="" class="invalid6" />
+                <p class="tanamdeboba_text">მინიმუმ 2 სიმბოლო</p>
               </div>
             </div>
 
-            <div class="calendars_right">
-              <h3>დამთავრების რიცხვი</h3>
-              <div class="right_calendar">
-                <form id="right_calendar_form">
+            <div class="damsaqmebeli">
+              <h3>დამსაქმებელი</h3>
+              <div class="damsaqmebeli_div">
+                <form>
                   <input
-                    type="date"
-                    class="damtavrebis_ricxvi"
-                    name="damtavrebis_ricxvi"
+                    type="text"
+                    class="damsaqmebeli_input"
+                    name="damsaqmebeli_text"
+                    placeholder="დამსაქმებელი"
+                    minlength="2"
                   /><br />
                 </form>
+                <img src="./assets/pics/valid.png" alt="" class="valid7" />
+                <img src="./assets/pics/invalid.png" alt="" class="invalid7" />
+                <p class="damsaqmebeli_text">მინიმუმ 2 სიმბოლო</p>
               </div>
             </div>
-          </div>
 
-          <div class="agwera">
-            <p>აღწერა</p>
-            <input
-              type="text"
-              class="agwera_input"
-              placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
-            />
+            <div class="calendars">
+              <div class="calendars_left">
+                <h3>დაწყების რიცხვი</h3>
+                <div class="left_calendar">
+                  <form id="left_calendar_form">
+                    <input
+                      type="date"
+                      class="dawyebis_ricxvi"
+                      name="dawyebis_ricxvi"
+                    /><br />
+                  </form>
+                </div>
+              </div>
+
+              <div class="calendars_right">
+                <h3>დამთავრების რიცხვი</h3>
+                <div class="right_calendar">
+                  <form id="right_calendar_form">
+                    <input
+                      type="date"
+                      class="damtavrebis_ricxvi"
+                      name="damtavrebis_ricxvi"
+                    /><br />
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <div class="agwera">
+              <p>აღწერა</p>
+              <textarea
+                type="text"
+                class="agwera_input"
+                placeholder="როლი თანამდებობაზე და ზოგადი აღწერა"
+              >
+              </textarea>
+            </div>
+            <div class="experience_underline"></div>
           </div>
         </div>
-
-        <div class="experience_underline"></div>
 
         <div class="meti_gamocdileba">
           <button class="meti_gamocdileba_button">
@@ -130,16 +132,18 @@
         </div>
 
         <div class="resume_mid">
-          <h3 class="gamocdileba_text">გამოცდილება</h3>
-          <div class="dasaqmeba">
-            <h4 class="tanamdebobis_text"></h4>
-            <h4 class="damsaqmeblis_text"></h4>
+          <div class="mid_single_resume">
+            <h3 class="gamocdileba_text">გამოცდილება</h3>
+            <div class="dasaqmeba">
+              <h4 class="tanamdebobis_text"></h4>
+              <h4 class="damsaqmeblis_text"></h4>
+            </div>
+            <div class="dates">
+              <p class="start_date"></p>
+              <p class="end_date"></p>
+            </div>
+            <p class="agwera_text"></p>
           </div>
-          <div class="dates">
-            <p class="start_date"></p>
-            <p class="end_date"></p>
-          </div>
-          <p class="agwera_text"></p>
         </div>
       </div>
     </div>

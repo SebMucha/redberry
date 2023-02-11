@@ -1,12 +1,50 @@
 document.querySelector("#redirect_button4").addEventListener("click", () => {
+  localStorage.removeItem("fname");
+  localStorage.removeItem("lname");
+  localStorage.removeItem("email");
+  localStorage.removeItem("number");
+  localStorage.removeItem("aboutMe");
+  localStorage.removeItem("pic");
+  localStorage.removeItem("aboutMeInput");
+  localStorage.removeItem("valid5Display");
+  localStorage.removeItem("invalid5Display");
+  localStorage.removeItem("invalid6Display");
+  localStorage.removeItem("valid6Display");
+  localStorage.removeItem("invalid7Display");
+  localStorage.removeItem("valid7Display");
+  localStorage.removeItem("invalid8Display");
+  localStorage.removeItem("valid8Display");
+  localStorage.removeItem("tanamdebobaValue");
+  localStorage.removeItem("tanamdebobaBorderColor");
+  localStorage.removeItem("damsaqmebeliBorderColor");
+  localStorage.removeItem("damsaqmebeliValue");
+  localStorage.removeItem("dawyebisRicxviValue");
+  localStorage.removeItem("dawyebisRicxviBorderColor");
+  localStorage.removeItem("damtavrebisRicxviValue");
+  localStorage.removeItem("damtavrebisRicxviBorderColor");
+  localStorage.removeItem("agweraValue");
+  localStorage.removeItem("agweraBorderColor");
+  localStorage.removeItem("xarisxi");
+
   window.location.href = "index.html";
 });
 document.querySelector(".back_redirect").addEventListener("click", () => {
   window.location.href = "piradi.html";
 });
 document.querySelector(".next_redirect").addEventListener("click", () => {
-  window.location.href = "ganatleba.html";
+  if (
+    valid6.style.display === "block" &&
+    valid7.style.display === "block" &&
+    dawyebisRicxvi.style.borderColor === "green" &&
+    damtavrebisRicxvi.style.borderColor === "green" &&
+    agwera.style.borderColor === "green"
+  ) {
+    window.location.href = "ganatleba.html";
+  } else {
+    alert("must validly complete form ");
+  }
 });
+
 window.addEventListener("load", function () {
   let fname = localStorage.getItem("fname");
   let lname = localStorage.getItem("lname");
@@ -31,10 +69,15 @@ window.addEventListener("load", function () {
   }
 });
 
+let invalid5 = document.querySelector(".invalid6");
+let valid5 = document.querySelector(".valid6");
 let invalid6 = document.querySelector(".invalid6");
 let valid6 = document.querySelector(".valid6");
 let invalid7 = document.querySelector(".invalid7");
 let valid7 = document.querySelector(".valid7");
+let invalid8 = document.querySelector(".invalid7");
+let valid8 = document.querySelector(".valid7");
+
 let tanamdeboba = document.querySelector(".tanamdeboba_input");
 let damsaqmebeli = document.querySelector(".damsaqmebeli_input");
 let dawyebisRicxvi = document.querySelector(".dawyebis_ricxvi");
@@ -101,12 +144,7 @@ dawyebisRicxvi.addEventListener("input", function () {
 damtavrebisRicxvi.addEventListener("input", function () {
   damtavrebisRicxviText.textContent = damtavrebisRicxvi.value;
   if (damtavrebisRicxvi.value.length > 0) {
-    if (new Date(dawyebisRicxvi.value) < new Date(damtavrebisRicxvi.value)) {
-      dawyebisRicxvi.style.borderColor = "green";
-      damtavrebisRicxvi.style.borderColor = "green";
-    } else {
-      damtavrebisRicxvi.style.borderColor = "red";
-    }
+    damtavrebisRicxvi.style.borderColor = "green";
   } else {
     damtavrebisRicxvi.style.borderColor = "red";
   }
@@ -165,66 +203,185 @@ window.addEventListener("load", function () {
   agweraText.textContent = agwera.value;
 });
 
-// clone on button press and revalidate form
-
 const button = document.querySelector(".meti_gamocdileba_button");
-const originalForm = document.querySelector(".scroll_div");
+const resumeMid = document.querySelector(".mid_single_resume");
+const scrollDiv = document.querySelector(".scroll_div");
 
-button.addEventListener("click", cloneAndValidateForm);
+button.addEventListener("click", function () {
+  const clonedResumeMid = resumeMid.cloneNode(true);
 
-function cloneAndValidateForm() {
-  let newForm = originalForm.cloneNode(true);
-  originalForm.appendChild(newForm);
+  const clonedScrollDiv = scrollDiv.cloneNode(true);
 
-  //   let newTanamdeboba = newForm.querySelector("#tanamdeboba");
-  //   let newDamsaqmebeli = newForm.querySelector("#damsaqmebeli");
-  //   let newDawyebisRicxvi = newForm.querySelector("#dawyebisRicxvi");
-  //   let newDamtavrebisRicxvi = newForm.querySelector("#damtavrebisRicxvi");
-  //   let newAgwera = newForm.querySelector("#agwera");
-  //   newTanamdeboba.addEventListener("input", function () {
-  //     if (newTanamdeboba.value.length >= 2) {
-  //       newTanamdeboba.style.borderColor = "green";
-  //     } else {
-  //       newTanamdeboba.style.borderColor = "red";
-  //     }
-  //   });
+  resumeMid.parentNode.appendChild(clonedResumeMid);
+  scrollDiv.parentNode.appendChild(clonedScrollDiv);
+  localStorage.setItem("clonedResumeMid", clonedResumeMid.outerHTML);
+  localStorage.setItem("clonedScrollDiv", clonedScrollDiv.outerHTML);
+  let clonedTanamdeboba = clonedScrollDiv.querySelector(".tanamdeboba_input");
+  let clonedDamsaqmebeli = clonedScrollDiv.querySelector(".damsaqmebeli_input");
+  let clonedDawyebisRicxvi = clonedScrollDiv.querySelector(".dawyebis_ricxvi");
+  let clonedDamtavrebisRicxvi = clonedScrollDiv.querySelector(
+    ".damtavrebis_ricxvi"
+  );
+  let clonedAgwera = clonedScrollDiv.querySelector(".agwera_input");
 
-  //   newDamsaqmebeli.addEventListener("input", function () {
-  //     if (newDamsaqmebeli.value.length >= 2) {
-  //       newDamsaqmebeli.style.borderColor = "green";
-  //     } else {
-  //       newDamsaqmebeli.style.borderColor = "red";
-  //     }
-  //   });
+  let clonedTanamdebobaText =
+    clonedResumeMid.querySelector(".tanamdebobis_text");
+  let clonedDamsaqmebeliText =
+    clonedResumeMid.querySelector(".damsaqmeblis_text");
+  let clonedDawyebisRicxviText = clonedResumeMid.querySelector(".start_date");
+  let clonedDamtavrebisRicxviText = clonedResumeMid.querySelector(".end_date");
+  let clonedAgweraText = clonedResumeMid.querySelector(".agwera_text");
 
-  //   newDawyebisRicxvi.addEventListener("input", function () {
-  //     if (newDawyebisRicxvi.value.length > 0) {
-  //       newDawyebisRicxvi.style.borderColor = "green";
-  //     } else {
-  //       newDawyebisRicxvi.style.borderColor = "red";
-  //     }
-  //   });
+  clonedResumeMid.querySelector(".gamocdileba_text").style.display = "none";
+  clonedTanamdebobaText.textContent = "";
+  clonedDamsaqmebeliText.textContent = "";
+  clonedDawyebisRicxviText.textContent = "";
+  clonedDamtavrebisRicxviText.textContent = "";
+  clonedAgweraText.textContent = "";
+  let clonedInvalid6 = clonedScrollDiv.querySelector(".invalid6");
+  let clonedValid6 = clonedScrollDiv.querySelector(".valid6");
+  let clonedInvalid7 = clonedScrollDiv.querySelector(".invalid7");
+  let clonedValid7 = clonedScrollDiv.querySelector(".valid7");
 
-  //   newDamtavrebisRicxvi.addEventListener("input", function () {
-  //     if (newDamtavrebisRicxvi.value.length > 0) {
-  //       if (
-  //         new Date(newDawyebisRicxvi.value) < new Date(newDamtavrebisRicxvi.value)
-  //       ) {
-  //         newDawyebisRicxvi.style.borderColor = "green";
-  //         newDamtavrebisRicxvi.style.borderColor = "green";
-  //       } else {
-  //         newDamtavrebisRicxvi.style.borderColor = "red";
-  //       }
-  //     } else {
-  //       newDamtavrebisRicxvi.style.borderColor = "red";
-  //     }
-  //   });
+  clonedScrollDiv.querySelectorAll("input").forEach((input) => {
+    input.value = "";
+    input.style.borderColor = "#BCBCBC";
+  });
+  clonedScrollDiv.querySelectorAll("textarea").forEach((textarea) => {
+    textarea.value = "";
+    textarea.style.borderColor = "#BCBCBC";
+  });
 
-  //   newAgwera.addEventListener("input", function () {
-  //     if (newAgwera.value.length > 0) {
-  //       newAgwera.style.borderColor = "green";
-  //     } else {
-  //       newAgwera.style.borderColor = "red";
-  //     }
-  //   });
-}
+  clonedScrollDiv.querySelectorAll(".valid6").forEach((validIcon) => {
+    validIcon.style.display = "none";
+  });
+
+  clonedScrollDiv.querySelectorAll(".invalid6").forEach((invalidIcon) => {
+    invalidIcon.style.display = "none";
+  });
+
+  clonedScrollDiv.querySelectorAll(".valid7").forEach((validIcon) => {
+    validIcon.style.display = "none";
+  });
+
+  clonedScrollDiv.querySelectorAll(".invalid7").forEach((invalidIcon) => {
+    invalidIcon.style.display = "none";
+  });
+
+  clonedTanamdeboba.addEventListener("input", function () {
+    clonedTanamdebobaText.textContent = clonedTanamdeboba.value;
+    if (clonedTanamdeboba.value.length >= 2) {
+      clonedValid6.style.display = "block";
+      clonedTanamdeboba.style.borderColor = "green";
+      clonedInvalid6.style.display = "none";
+    } else {
+      clonedValid6.style.display = "none";
+      clonedTanamdeboba.style.borderColor = "red";
+      clonedInvalid6.style.display = "block";
+    }
+    localStorage.setItem("clonedValid6Display", clonedValid6.style.display);
+    localStorage.setItem("clonedInvalid6Display", clonedInvalid6.style.display);
+    localStorage.setItem(
+      "clonedTanamdebobaBorderColor",
+      clonedTanamdeboba.style.borderColor
+    );
+    localStorage.setItem("clonedTanamdebobaValue", clonedTanamdeboba.value);
+  });
+
+  clonedDamsaqmebeli.addEventListener("input", function () {
+    clonedDamsaqmebeliText.textContent = ", " + clonedDamsaqmebeli.value;
+    if (clonedDamsaqmebeli.value.length >= 2) {
+      clonedValid7.style.display = "block";
+      clonedDamsaqmebeli.style.borderColor = "green";
+      clonedInvalid7.style.display = "none";
+    } else {
+      clonedValid7.style.display = "none";
+      clonedDamsaqmebeli.style.borderColor = "red";
+      clonedInvalid7.style.display = "block";
+    }
+    localStorage.setItem("clonedDamsaqmebeliValue", clonedDamsaqmebeli.value);
+    localStorage.setItem("clonedValid7Display", clonedValid7.style.display);
+    localStorage.setItem("clonedInvalid7Display", clonedInvalid7.style.display);
+    localStorage.setItem(
+      "clonedDamsaqmebeliBorderColor",
+      clonedDamsaqmebeli.style.borderColor
+    );
+  });
+
+  clonedDawyebisRicxvi.addEventListener("input", function () {
+    clonedDawyebisRicxviText.textContent = clonedDawyebisRicxvi.value + " -";
+    if (clonedDawyebisRicxvi.value.length > 0) {
+      clonedDawyebisRicxvi.style.borderColor = "green";
+    } else {
+      clonedDawyebisRicxvi.style.borderColor = "red";
+    }
+    localStorage.setItem(
+      "clonedDawyebisRicxviValue",
+      clonedDawyebisRicxvi.value
+    );
+    localStorage.setItem(
+      "clonedDawyebisRicxviBorderColor",
+      clonedDawyebisRicxvi.style.borderColor
+    );
+  });
+
+  clonedDamtavrebisRicxvi.addEventListener("input", function () {
+    clonedDamtavrebisRicxviText.textContent = clonedDamtavrebisRicxvi.value;
+    if (clonedDamtavrebisRicxvi.value.length > 0) {
+      clonedDamtavrebisRicxvi.style.borderColor = "green";
+    } else {
+      clonedDamtavrebisRicxvi.style.borderColor = "red";
+    }
+    localStorage.setItem(
+      "clonedDamtavrebisRicxviValue",
+      clonedDamtavrebisRicxvi.value
+    );
+    localStorage.setItem(
+      "clonedDamtavrebisRicxviBorderColor",
+      clonedDamtavrebisRicxvi.style.borderColor
+    );
+  });
+
+  clonedAgwera.addEventListener("input", function () {
+    clonedAgweraText.textContent = clonedAgwera.value;
+    if (clonedAgwera.value.length > 0) {
+      clonedAgwera.style.borderColor = "green";
+    } else {
+      clonedAgwera.style.borderColor = "red";
+    }
+    localStorage.setItem("clonedAgweraValue", clonedAgwera.value);
+    localStorage.setItem("clonedAgweraText_Value", clonedAgweraText.value);
+    localStorage.setItem(
+      "clonedAgweraBorderColor",
+      clonedAgwera.style.borderColor
+    );
+  });
+});
+
+// window.addEventListener("load", function () {
+//   let divs = JSON.parse(localStorage.getItem("divs")) || [];
+//   divs.forEach((div) => {
+//     document.querySelector(".scroll_div").insertAdjacentHTML("beforeend", div);
+//   });
+// });
+
+// window.addEventListener("load", function () {
+//   const clonedResumeMidHTML = localStorage.getItem("clonedResumeMid");
+//   const clonedScrollDivHTML = localStorage.getItem("clonedScrollDiv");
+
+//   if (clonedResumeMidHTML) {
+//     const clonedResumeMid = new DOMParser().parseFromString(
+//       clonedResumeMidHTML,
+//       "text/html"
+//     ).body.firstChild;
+//     resumeMid.parentNode.appendChild(clonedResumeMid);
+//   }
+
+//   if (clonedScrollDivHTML) {
+//     const clonedScrollDiv = new DOMParser().parseFromString(
+//       clonedScrollDivHTML,
+//       "text/html"
+//     ).body.firstChild;
+//     scrollDiv.parentNode.appendChild(clonedScrollDiv);
+//   }
+// });

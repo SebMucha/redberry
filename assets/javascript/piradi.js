@@ -7,8 +7,9 @@ document.querySelector("#redirect_button2").addEventListener("click", () => {
   localStorage.removeItem("pic");
   localStorage.removeItem("aboutMeInput");
   localStorage.removeItem("validationResult");
-  valid5.style.display = "none";
-  invalid5.style.display = "none";
+  localStorage.removeItem("valid5Display");
+  localStorage.removeItem("invalid5Display");
+  localStorage.removeItem("validationResult");
 
   window.location.href = "index.html";
 });

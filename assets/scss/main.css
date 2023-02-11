@@ -21,6 +21,13 @@ input.saswavlebeli_input {
   padding: 15px;
 }
 
+div.resume_bottom {
+  height: 25%;
+  overflow-y: auto;
+}
+div.resume_bottom div.bottom_single_resume {
+  margin-top: 10px;
+}
 div.resume_bottom h2 {
   color: #F93B1D;
   font-size: 18px;
@@ -32,7 +39,6 @@ div.resume_bottom div.degree {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 5px;
   margin-bottom: 10px;
 }
 div.resume_bottom p.finish_date {
@@ -226,22 +232,19 @@ div.agwera {
   gap: 8px;
   padding: 5px 70px;
 }
-div.agwera input.agwera_input {
+div.agwera textarea.agwera_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 10vh;
   border: 1px solid #BCBCBC;
   border-radius: 4px;
   padding: 10px;
+  resize: none;
 }
 
 div.experience_underline {
-  margin-top: 15px;
+  margin-top: 20px;
   border: 1px solid #BCBCBC;
-  width: 85%;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 button.meti_gamocdileba_button {
@@ -302,6 +305,8 @@ button.next_redirect {
 div.resume_mid {
   margin-top: 15px;
   height: 30%;
+  border-bottom: 1px solid #C8C8C8;
+  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -310,12 +315,22 @@ div.resume_mid {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  border-bottom: 1px solid #C8C8C8;
+}
+div.resume_mid div.mid_single_resume {
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 div.resume_mid h3.gamocdileba_text {
   font-size: 18px;
   line-height: 22px;
   color: #F93B1D;
+  margin-bottom: 10px;
 }
 div.resume_mid div.dasaqmeba {
   display: -webkit-box;
@@ -328,10 +343,12 @@ div.resume_mid div.dates {
   display: flex;
   color: #909090;
   gap: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
 }
 
-div.scroll_div {
-  height: 60vh;
+div.scroll_div_parent {
+  height: 70vh;
   overflow-y: auto;
 }
 
@@ -354,6 +371,7 @@ select#xarisxi {
   border: 1px solid #BCBCBC;
   border-radius: 4px;
   padding: 10px;
+  resize: none;
 }
 
 div.scroll_div2 {
@@ -435,6 +453,7 @@ div.whole div.hero1 {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 50px;
+  overflow-y: auto;
 }
 div.whole div.hero1 header {
   height: 100px;
@@ -767,6 +786,7 @@ div.resume div.resume_top {
           flex-direction: column;
   gap: 20px;
   border-bottom: 1px solid #C8C8C8;
+  overflow-y: auto;
 }
 div.resume div.resume_top div.full_name {
   display: -webkit-box;
