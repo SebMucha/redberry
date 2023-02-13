@@ -1,31 +1,5 @@
 document.querySelector("#redirect_button4").addEventListener("click", () => {
-  localStorage.removeItem("fname");
-  localStorage.removeItem("lname");
-  localStorage.removeItem("email");
-  localStorage.removeItem("number");
-  localStorage.removeItem("aboutMe");
-  localStorage.removeItem("pic");
-  localStorage.removeItem("aboutMeInput");
-  localStorage.removeItem("valid5Display");
-  localStorage.removeItem("invalid5Display");
-  localStorage.removeItem("invalid6Display");
-  localStorage.removeItem("valid6Display");
-  localStorage.removeItem("invalid7Display");
-  localStorage.removeItem("valid7Display");
-  localStorage.removeItem("invalid8Display");
-  localStorage.removeItem("valid8Display");
-  localStorage.removeItem("tanamdebobaValue");
-  localStorage.removeItem("tanamdebobaBorderColor");
-  localStorage.removeItem("damsaqmebeliBorderColor");
-  localStorage.removeItem("damsaqmebeliValue");
-  localStorage.removeItem("dawyebisRicxviValue");
-  localStorage.removeItem("dawyebisRicxviBorderColor");
-  localStorage.removeItem("damtavrebisRicxviValue");
-  localStorage.removeItem("damtavrebisRicxviBorderColor");
-  localStorage.removeItem("agweraValue");
-  localStorage.removeItem("agweraBorderColor");
-  localStorage.removeItem("xarisxi");
-
+  localStorage.clear();
   window.location.href = "index.html";
 });
 document.querySelector(".back_redirect").addEventListener("click", () => {
@@ -357,31 +331,3 @@ button.addEventListener("click", function () {
     );
   });
 });
-
-// window.addEventListener("load", function () {
-//   let divs = JSON.parse(localStorage.getItem("divs")) || [];
-//   divs.forEach((div) => {
-//     document.querySelector(".scroll_div").insertAdjacentHTML("beforeend", div);
-//   });
-// });
-
-// window.addEventListener("load", function () {
-//   const clonedResumeMidHTML = localStorage.getItem("clonedResumeMid");
-//   const clonedScrollDivHTML = localStorage.getItem("clonedScrollDiv");
-
-//   if (clonedResumeMidHTML) {
-//     const clonedResumeMid = new DOMParser().parseFromString(
-//       clonedResumeMidHTML,
-//       "text/html"
-//     ).body.firstChild;
-//     resumeMid.parentNode.appendChild(clonedResumeMid);
-//   }
-
-//   if (clonedScrollDivHTML) {
-//     const clonedScrollDiv = new DOMParser().parseFromString(
-//       clonedScrollDivHTML,
-//       "text/html"
-//     ).body.firstChild;
-//     scrollDiv.parentNode.appendChild(clonedScrollDiv);
-//   }
-// });

@@ -1,16 +1,5 @@
 document.querySelector("#redirect_button2").addEventListener("click", () => {
-  localStorage.removeItem("fname");
-  localStorage.removeItem("lname");
-  localStorage.removeItem("email");
-  localStorage.removeItem("number");
-  localStorage.removeItem("aboutMe");
-  localStorage.removeItem("pic");
-  localStorage.removeItem("aboutMeInput");
-  localStorage.removeItem("validationResult");
-  localStorage.removeItem("valid5Display");
-  localStorage.removeItem("invalid5Display");
-  localStorage.removeItem("validationResult");
-
+  localStorage.clear();
   window.location.href = "index.html";
 });
 let form = document.querySelector("#myform_left");

@@ -1,3 +1,20 @@
+let start_redirect = document.querySelector("#start_redirect");
+
+let popup = document.querySelector(".x");
+let button = document.querySelector(".popup");
+window.addEventListener("load", function () {
+  button.style.display = "block";
+});
+
+button.addEventListener("click", function () {
+  button.style.display = "none";
+});
+
+start_redirect.addEventListener("click", function () {
+  localStorage.clear();
+  window.location.href = "index.html";
+});
+
 window.addEventListener("load", function () {
   let fname = localStorage.getItem("fname");
   let lname = localStorage.getItem("lname");
@@ -32,4 +49,11 @@ window.addEventListener("load", function () {
   document.querySelector(".start_date").textContent = dawyebisRicxviText + " -";
   document.querySelector(".end_date").textContent = damtavrebisRicxviText;
   document.querySelector(".agwera_text").textContent = agweraValue;
+
+  let saswavlebeliValue = localStorage.getItem("saswavlebeliValue");
+  let damtavrebisRicxvi2Value = localStorage.getItem("damtavrebisRicxvi2Value");
+  let agwera2Value = localStorage.getItem("agwera2Value") || "";
+  document.querySelector(".saswavlebeli_text").textContent = saswavlebeliValue;
+  document.querySelector(".finish_date").textContent = damtavrebisRicxvi2Value;
+  document.querySelector(".ganatlebis_agwera_text").textContent = agwera2Value;
 });

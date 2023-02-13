@@ -4,7 +4,11 @@ body{
 div.home{
     height: 100vh;
     width: 100%;
-    background-image: url("/assets/pics/background.jpg");
+    // background-image: url("/assets/pics/background.jpg");
+    img.background_img{
+        height: 100%;
+        width: 100%;
+    }
     img.Redberry{
         position: absolute;
         left: 70px;

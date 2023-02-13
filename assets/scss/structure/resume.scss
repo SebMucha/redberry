@@ -1,10 +1,22 @@
+button#start_redirect{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: #FFFFFF;
+    position: absolute;
+    left: 45px;
+    top: 60px;
+}
 div.resume_final{
     display: flex;
     flex-direction: column;
     padding: 80px 60px;
-    height: 80vh;
-    width: 50%;
+    height: 95vh;
+    width: 35%;
     margin: 0 auto;
+    border: 0.8px solid #000000;
+    margin-top: 20px;
     div.resume_top{
         height: 30%;
         display: flex;
@@ -12,6 +24,27 @@ div.resume_final{
         gap: 20px;
         border-bottom: 1px solid #C8C8C8;
         overflow-y: auto;
+        div.full_name{
+            display: flex;
+            gap: 10px;
+            color: #F93B1D;
+            font-weight: 700;
+            font-size: 25px;
+            line-height: 42px;
+        }
+        .chem_shesaxeb_teqsti{
+            max-width: 50%;
+        }
+        figure{
+            img.priv_pic{
+                position: absolute;
+                width: 246px;
+                height: 246px;
+                left: 53%;
+                top: 45px;
+                border-radius: 133px;
+            }
+        }
         
         div.full_name{
         display: flex;
@@ -21,9 +54,54 @@ div.resume_final{
         font-size: 25px;
         line-height: 42px;
     }
+    div.mail_num{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .chem_shesaxeb{
+        color: #F93B1D;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 }
 .logo-13{
     position: absolute;
     top: 85vh;
+}
+
+div.popup{
+    box-sizing: border-box;
+    padding: 28px 30px 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 427px;
+    height: 167px;
+    right: 5%;
+    top: 50px;
+    background: #FFFFFF;
+    border: 1px solid #E4E4E4;
+    box-shadow: 0px 4px 28px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    align-content: center;
+    display: none;
+    p{
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 43px;
+    }
+    button.x{
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        font-size: 20px;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
 }
