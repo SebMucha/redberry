@@ -10,6 +10,48 @@
   font-family: "Helvetica Neue";
 }
 
+div.resume_final {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 80px 60px;
+  height: 80vh;
+  width: 50%;
+  margin: 0 auto;
+}
+div.resume_final div.resume_top {
+  height: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  border-bottom: 1px solid #C8C8C8;
+  overflow-y: auto;
+}
+div.resume_final div.resume_top div.full_name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  color: #F93B1D;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 42px;
+}
+
+.logo-13 {
+  position: absolute;
+  top: 85vh;
+}
+
 input.saswavlebeli_input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -22,8 +64,16 @@ input.saswavlebeli_input {
 }
 
 div.resume_bottom {
-  height: 25%;
+  height: 30%;
   overflow-y: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
 }
 div.resume_bottom div.bottom_single_resume {
   margin-top: 10px;
@@ -247,7 +297,7 @@ div.experience_underline {
   border: 1px solid #BCBCBC;
 }
 
-button.meti_gamocdileba_button {
+button.meti_gamocdileba_button, .meti_ganatleba_button {
   padding: 18px 60px;
   background: #68a5eb;
   margin-left: 75px;
@@ -374,7 +424,7 @@ select#xarisxi {
   resize: none;
 }
 
-div.scroll_div2 {
+div.scroll_div2_parent {
   height: 40vh;
   overflow-y: auto;
 }

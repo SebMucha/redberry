@@ -10,8 +10,12 @@ input.saswavlebeli_input{
 
 }
 div.resume_bottom{
-    height: 25%;
+    height: 30%;
     overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     div.bottom_single_resume{
         margin-top: 10px;
     }

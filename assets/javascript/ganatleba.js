@@ -192,30 +192,31 @@ window.addEventListener("load", function () {
     "damtavrebisRicxvi2BorderColor"
   );
 
-  xarisxi.value = localStorage.getItem("xarisxiValue") || "";
+  xarisxi.value = localStorage.getItem("xarisxiValue");
+  console.log(localStorage.getItem("xarisxiValue"), xarisxi.value);
   xarisxi.style.borderColor = localStorage.getItem("xarisxiBorderColor");
 
   agwera2.value = localStorage.getItem("agwera2Value") || "";
   agwera2.style.borderColor = localStorage.getItem("agwera2BorderColor");
 
   if (xarisxi.value == 1) {
-    xarisxiText.textContent = ", " + "საშუალო სკოლის დიპლომი";
+    xarisxiText.textContent = ",საშუალო სკოლის დიპლომი";
   } else if (xarisxi.value == 2) {
-    xarisxiText.textContent = ", " + "ზოგადსაგანმანათლებლო დიპლომი";
+    xarisxiText.textContent = ",ზოგადსაგანმანათლებლო დიპლომი";
   } else if (xarisxi.value == 3) {
-    xarisxiText.textContent = ", " + "ბაკალავრი";
+    xarisxiText.textContent = ",ბაკალავრი";
   } else if (xarisxi.value == 4) {
-    xarisxiText.textContent = ", " + "მაგისტრი";
+    xarisxiText.textContent = ",მაგისტრი";
   } else if (xarisxi.value == 5) {
-    xarisxiText.textContent = ", " + "დოქტორი";
+    xarisxiText.textContent = ",დოქტორი";
   } else if (xarisxi.value == 6) {
-    xarisxiText.textContent = ", " + "ასოცირებული ხარისხი";
+    xarisxiText.textContent = ",ასოცირებული ხარისხი";
   } else if (xarisxi.value == 7) {
-    xarisxiText.textContent = ", " + "სტუდენტი";
+    xarisxiText.textContent = ",სტუდენტი";
   } else if (xarisxi.value == 8) {
-    xarisxiText.textContent = ", " + "კოლეჯი(ხარისიხს გარეშე)";
+    xarisxiText.textContent = ",კოლეჯი(ხარისიხს გარეშე)";
   } else if (xarisxi.value == 9) {
-    xarisxiText.textContent = ", " + "სხვა";
+    xarisxiText.textContent = ",სხვა";
   }
 
   saswavlebeliText.textContent = saswavlebeli.value;
@@ -225,156 +226,329 @@ window.addEventListener("load", function () {
   ganatlebisAgweraText.textContent = agwera2.value;
 });
 
-// const button = document.querySelector(".meti_gamocdileba_button");
-// const resumeBottom = document.querySelector(".bottom_single_resume");
-// const scrollDiv2 = document.querySelector(".scroll_div2");
+const button2 = document.querySelector(".meti_ganatleba_button");
+const resumeBottom = document.querySelector(".bottom_single_resume");
+const scrollDiv2 = document.querySelector(".scroll_div2");
 
-// button.addEventListener("click", function () {
-//   const clonedResumeBottom = resumeBottom.cloneNode(true);
+button2.addEventListener("click", function () {
+  const clonedResumeBottom = resumeBottom.cloneNode(true);
+  const clonedResumeBottomHTML = clonedResumeBottom.outerHTML;
 
-//   const clonedScrollDiv2 = scrollDiv2.cloneNode(true);
+  const clonedScrollDiv2 = scrollDiv2.cloneNode(true);
+  const clonedScrollDiv2HTML = clonedScrollDiv2.outerHTML;
 
-//   resumeBottom.parentNode.appendChild(clonedResumeBottom);
-//   scrollDiv2.parentNode.appendChild(clonedScrollDiv2);
-//   localStorage.setItem("clonedResumeBottom", clonedResumeBottom.outerHTML);
-//   localStorage.setItem("clonedScrollDiv2", clonedScrollDiv2.outerHTML);
-//   let clonedSaswavlebeli = clonedScrollDiv.querySelector(".saswavlebeli_input");
-//   let clonedXarisxi = clonedScrollDiv.querySelector("#xarisxi");
-//   let clonedAgwera2 = clonedScrollDiv.querySelector(".agwera_input2");
-//   let clonedDamtavrebisRicxvi2 = clonedScrollDiv.querySelector(
-//     ".damtavrebis_ricxvi2"
+  resumeBottom.parentNode.appendChild(clonedResumeBottom);
+  scrollDiv2.parentNode.appendChild(clonedScrollDiv2);
+
+  localStorage.setItem("clonedResumeBottomHTML", clonedResumeBottomHTML);
+  localStorage.setItem("clonedScrollDiv2HTML", clonedScrollDiv2HTML);
+  let clonedSaswavlebeli = clonedScrollDiv2.querySelector(
+    ".saswavlebeli_input"
+  );
+  let clonedXarisxi = clonedScrollDiv2.querySelector("#xarisxi");
+  let clonedAgwera2 = clonedScrollDiv2.querySelector(".agwera_input2");
+  let clonedDamtavrebisRicxvi2 = clonedScrollDiv2.querySelector(
+    ".damtavrebis_ricxvi2"
+  );
+
+  let clonedSaswavlebeliText =
+    clonedResumeBottom.querySelector(".saswavlebeli_text");
+  let clonedXarisxiText = clonedResumeBottom.querySelector(".xarisxi_text");
+  let clonedDamtavrebisRicxvi2Text =
+    clonedResumeBottom.querySelector(".finish_date");
+  let clonedAgwera2Text = clonedResumeBottom.querySelector(
+    ".ganatlebis_agwera_text"
+  );
+
+  let ganatlebaText = (clonedResumeBottom.querySelector(
+    ".ganatleba_text"
+  ).style.display = "none");
+
+  ganatlebaText.textContent = "";
+  clonedSaswavlebeliText.textContent = "";
+  clonedXarisxiText.textContent = "";
+  clonedDamtavrebisRicxvi2Text.textContent = "";
+  clonedAgwera2Text.textContent = "";
+  let clonedInvalid8 = clonedScrollDiv2.querySelector(".invalid8");
+  let clonedValid8 = clonedScrollDiv2.querySelector(".valid8");
+
+  clonedScrollDiv2.querySelectorAll("input").forEach((input) => {
+    input.value = "";
+    input.style.borderColor = "#BCBCBC";
+  });
+  clonedScrollDiv2.querySelectorAll("textarea").forEach((textarea) => {
+    textarea.value = "";
+    textarea.style.borderColor = "#BCBCBC";
+  });
+  clonedScrollDiv2.querySelectorAll("select").forEach((textarea) => {
+    textarea.value = "";
+    textarea.style.borderColor = "#BCBCBC";
+  });
+  clonedScrollDiv2.querySelectorAll(".valid8").forEach((validIcon) => {
+    validIcon.style.display = "none";
+  });
+  clonedScrollDiv2.querySelectorAll(".invalid8").forEach((invalidIcon) => {
+    invalidIcon.style.display = "none";
+  });
+
+  clonedSaswavlebeli.addEventListener("input", function () {
+    clonedSaswavlebeliText.textContent = clonedSaswavlebeli.value;
+    if (clonedSaswavlebeli.value.length >= 2) {
+      clonedValid8.style.display = "block";
+      clonedSaswavlebeli.style.borderColor = "green";
+      clonedInvalid8.style.display = "none";
+    } else {
+      clonedValid8.style.display = "none";
+      clonedSaswavlebeli.style.borderColor = "red";
+      clonedInvalid8.style.display = "block";
+    }
+    localStorage.setItem("clonedValid8Display", clonedValid8.style.display);
+    localStorage.setItem("clonedInvalid8Display", clonedInvalid8.style.display);
+    localStorage.setItem(
+      "clonedSaswavlebeliBorderColor",
+      clonedSaswavlebeli.style.borderColor
+    );
+    localStorage.setItem("clonedSaswavlebeliValue", clonedSaswavlebeli.value);
+  });
+
+  clonedXarisxi.addEventListener("input", function () {
+    clonedXarisxiText.textContent = ", " + clonedXarisxi.value;
+    if (clonedXarisxi.value.length) {
+      clonedXarisxi.style.borderColor = "green";
+    } else {
+      clonedXarisxi.style.borderColor = "red";
+    }
+    localStorage.setItem("clonedXarisxiValue", clonedXarisxi.value);
+    localStorage.setItem(
+      "clonedXarisxiBorderColor",
+      clonedXarisxi.style.borderColor
+    );
+  });
+
+  clonedDamtavrebisRicxvi2.addEventListener("input", function () {
+    clonedDamtavrebisRicxvi2Text.textContent = clonedDamtavrebisRicxvi2.value;
+    if (clonedDamtavrebisRicxvi2.value.length) {
+      clonedDamtavrebisRicxvi2.style.borderColor = "green";
+    } else {
+      clonedDamtavrebisRicxvi2.style.borderColor = "red";
+    }
+    localStorage.setItem(
+      "clonedDamtavrebisRicxvi2Value",
+      clonedDamtavrebisRicxvi2.value
+    );
+    localStorage.setItem(
+      "clonedDamtavrebisRicxvi2BorderColor",
+      clonedDamtavrebisRicxvi2.style.borderColor
+    );
+  });
+
+  clonedAgwera2.addEventListener("input", function () {
+    clonedAgwera2Text.textContent = clonedAgwera2.value;
+    if (clonedAgwera2.value.length > 0) {
+      clonedAgwera2.style.borderColor = "green";
+    } else {
+      clonedAgwera2.style.borderColor = "red";
+    }
+    localStorage.setItem("clonedAgwera2Value", clonedAgwera2.value);
+    localStorage.setItem("clonedAgwera2Text_Value", clonedAgwera2Text.value);
+    localStorage.setItem(
+      "clonedAgwera2BorderColor",
+      clonedAgwera2.style.borderColor
+    );
+  });
+});
+// window.addEventListener("load", function () {
+//   const clonedResumeBottom = localStorage.getItem("clonedResumeBottom");
+//   const clonedScrollDiv2 = localStorage.getItem("clonedScrollDiv2");
+
+//   if (clonedResumeBottom && clonedScrollDiv2) {
+//     resumeBottom.insertAdjacentHTML("afterend", clonedResumeBottom);
+//     scrollDiv2.insertAdjacentHTML("afterend", clonedScrollDiv2);
+//   }
+
+// clonedSaswavlebeli.value =
+//   localStorage.getItem("clonedSaswavlebeliValue") || "";
+// clonedValid8.style.display = localStorage.getItem("clonedValid8Display");
+// clonedInvalid8.style.display = localStorage.getItem("clonedInvalid8Display");
+// clonedSaswavlebeli.style.borderColor = localStorage.getItem(
+//   "clonedSaswavlebeliBorderColor"
+// );
+
+// clonedDamtavrebisRicxvi2.value =
+//   localStorage.getItem("clonedDamtavrebisRicxvi2Value") || "";
+// clonedDamtavrebisRicxvi2.style.borderColor = localStorage.getItem(
+//   "clonedDamtavrebisRicxvi2BorderColor"
+// );
+
+// clonedXarisxi.value = localStorage.getItem("clonedXarisxiValue") || "";
+// clonedXarisxi.style.borderColor = localStorage.getItem(
+//   "clonedXarisxiBorderColor"
+// );
+
+// clonedAgwera2.value = localStorage.getItem("clonedAgwera2Value") || "";
+// clonedAgwera2.style.borderColor = localStorage.getItem(
+//   "clonedAgwera2BorderColor"
+// );
+
+// if (clonedXarisxi.value == 1) {
+//   clonedXarisxiText.textContent = ",საშუალო სკოლის დიპლომი";
+// } else if (clonedXarisxi.value == 2) {
+//   clonedXarisxiText.textContent = ",ზოგადსაგანმანათლებლო დიპლომი";
+// } else if (clonedXarisxi.value == 3) {
+//   clonedXarisxiText.textContent = ",ბაკალავრი";
+// } else if (clonedXarisxi.value == 4) {
+//   clonedXarisxiText.textContent = ",მაგისტრი";
+// } else if (clonedXarisxi.value == 5) {
+//   clonedXarisxiText.textContent = ",დოქტორი";
+// } else if (clonedXarisxi.value == 6) {
+//   clonedXarisxiText.textContent = ",ასოცირებული ხარისხი";
+// } else if (clonedXarisxi.value == 7) {
+//   clonedXarisxiText.textContent = ",სტუდენტი";
+// } else if (clonedXarisxi.value == 8) {
+//   clonedXarisxiText.textContent = ",კოლეჯი(ხარისიხს გარეშე)";
+// } else if (clonedXarisxi.value == 9) {
+//   clonedXarisxiText.textContent = ",სხვა";
+// }
+
+// clonedSaswavlebeliText.textContent = clonedSaswavlebeli.value;
+
+// clonedDamtavrebisRicxvi2Text.textContent = clonedDamtavrebisRicxvi2.value;
+
+// clonedGanatlebisAgweraText.textContent = clonedAgwera2.value;
+// });
+// window.onload = function () {
+//   const clonedResumeBottom = localStorage.getItem("clonedResumeBottom");
+//   const clonedScrollDiv2 = localStorage.getItem("clonedScrollDiv2");
+
+//   if (clonedResumeBottom && clonedScrollDiv2) {
+//     resumeBottom.insertAdjacentHTML("afterend", clonedResumeBottom);
+//     scrollDiv2.insertAdjacentHTML("afterend", clonedScrollDiv2);
+//   }
+// };
+// window.addEventListener("load", function () {
+//   const clonedResumeBottomHTML = localStorage.getItem("clonedResumeBottomHTML");
+//   const clonedScrollDiv2HTML = localStorage.getItem("clonedScrollDiv2HTML");
+
+//   if (clonedResumeBottomHTML) {
+//     resumeBottom.insertAdjacentHTML("beforeend", clonedResumeBottomHTML);
+//   }
+
+//   if (clonedScrollDiv2HTML) {
+//     scrollDiv2.insertAdjacentHTML("beforeend", clonedScrollDiv2HTML);
+//   }
+//   // const clonedValid8 = clonedScrollDiv2.querySelector(".valid8");
+//   // const clonedInvalid8 = clonedScrollDiv2.querySelector(".invalid8");
+//   // const clonedSaswavlebeli = clonedScrollDiv2.querySelector(".saswavlebeli");
+
+//   // const clonedValid8Display = localStorage.getItem("clonedValid8Display");
+//   // const clonedInvalid8Display = localStorage.getItem("clonedInvalid8Display");
+//   // const clonedSaswavlebeliBorderColor = localStorage.getItem(
+//   //   "clonedSaswavlebeliBorderColor"
+//   // );
+//   // const clonedSaswavlebeliValue = localStorage.getItem(
+//   //   "clonedSaswavlebeliValue"
+//   // );
+
+//   // const clonedXarisxiValue = localStorage.getItem("clonedXarisxiValue");
+//   // const clonedXarisxiBorderColor = localStorage.getItem(
+//   //   "clonedXarisxiBorderColor"
+//   // );
+
+//   // const clonedDamtavrebisRicxvi2Value = localStorage.getItem(
+//   //   "clonedDamtavrebisRicxvi2Value"
+//   // );
+//   // const clonedDamtavrebisRicxvi2BorderColor = localStorage.getItem(
+//   //   "clonedDamtavrebisRicxvi2BorderColor"
+//   // );
+
+//   // const clonedAgwera2Value = localStorage.getItem("clonedAgwera2Value");
+//   // const clonedAgwera2TextValue = localStorage.getItem(
+//   //   "clonedAgwera2Text_Value"
+//   // );
+//   // const clonedAgwera2BorderColor = localStorage.getItem(
+//   //   "clonedAgwera2BorderColor"
+//   // );
+
+//   // if (
+//   //   clonedValid8Display &&
+//   //   clonedInvalid8Display &&
+//   //   clonedSaswavlebeliBorderColor &&
+//   //   clonedSaswavlebeliValue
+//   // ) {
+//   //   clonedValid8.style.display = clonedValid8Display;
+//   //   clonedInvalid8.style.display = clonedInvalid8Display;
+//   //   clonedSaswavlebeli.style.borderColor = clonedSaswavlebeliBorderColor;
+//   //   clonedSaswavlebeli.value = clonedSaswavlebeliValue;
+//   // }
+
+//   // if (clonedXarisxiValue && clonedXarisxiBorderColor) {
+//   //   clonedXarisxi.value = clonedXarisxiValue;
+//   //   clonedXarisxi.style.borderColor = clonedXarisxiBorderColor;
+//   // }
+
+//   // if (clonedDamtavrebisRicxvi2Value && clonedDamtavrebisRicxvi2BorderColor) {
+//   //   clonedDamtavrebisRicxvi2.value = clonedDamtavrebisRicxvi2Value;
+//   //   clonedDamtavrebisRicxvi2.style.borderColor =
+//   //     clonedDamtavrebisRicxvi2BorderColor;
+//   // }
+
+//   // if (
+//   //   clonedAgwera2Value &&
+//   //   clonedAgwera2TextValue &&
+//   //   clonedAgwera2BorderColor
+//   // ) {
+//   //   clonedAgwera2.value = clonedAgwera2Value;
+//   //   clonedAgwera2Text.value = clonedAgwera2TextValue;
+//   //   clonedAgwera2.style.borderColor = clonedAgwera2BorderColor;
+//   // }
+
+//   clonedSaswavlebeli.value =
+//     localStorage.getItem("clonedSaswavlebeliValue") || "";
+//   clonedValid8.style.display = localStorage.getItem("clonedValid8Display");
+//   clonedInvalid8.style.display = localStorage.getItem("clonedInvalid8Display");
+//   clonedSaswavlebeli.style.borderColor = localStorage.getItem(
+//     "clonedSaswavlebeliBorderColor"
 //   );
 
-//   let clonedTanamdebobaText =
-//     clonedResumeMid.querySelector(".tanamdebobis_text");
-//   let clonedDamsaqmebeliText =
-//     clonedResumeMid.querySelector(".damsaqmeblis_text");
-//   let clonedDawyebisRicxviText = clonedResumeMid.querySelector(".start_date");
-//   let clonedDamtavrebisRicxviText = clonedResumeMid.querySelector(".end_date");
-//   let clonedAgweraText = clonedResumeMid.querySelector(".agwera_text");
+//   clonedDamtavrebisRicxvi2.value =
+//     localStorage.getItem("clonedDamtavrebisRicxvi2Value") || "";
+//   clonedDamtavrebisRicxvi2.style.borderColor = localStorage.getItem(
+//     "clonedDamtavrebisRicxvi2BorderColor"
+//   );
 
-//   clonedResumeMid.querySelector(".gamocdileba_text").style.display = "none";
-//   clonedTanamdebobaText.textContent = "";
-//   clonedDamsaqmebeliText.textContent = "";
-//   clonedDawyebisRicxviText.textContent = "";
-//   clonedDamtavrebisRicxviText.textContent = "";
-//   clonedAgweraText.textContent = "";
-//   let clonedInvalid6 = clonedScrollDiv.querySelector(".invalid6");
-//   let clonedValid6 = clonedScrollDiv.querySelector(".valid6");
-//   let clonedInvalid7 = clonedScrollDiv.querySelector(".invalid7");
-//   let clonedValid7 = clonedScrollDiv.querySelector(".valid7");
+//   clonedXarisxi.value = localStorage.getItem("clonedXarisxiValue") || "";
+//   clonedXarisxi.style.borderColor = localStorage.getItem(
+//     "clonedXarisxiBorderColor"
+//   );
 
-//   clonedScrollDiv.querySelectorAll("input").forEach((input) => {
-//     input.value = "";
-//     input.style.borderColor = "#BCBCBC";
-//   });
-//   clonedScrollDiv.querySelectorAll("textarea").forEach((textarea) => {
-//     textarea.value = "";
-//     textarea.style.borderColor = "#BCBCBC";
-//   });
+//   clonedAgwera2.value = localStorage.getItem("clonedAgwera2Value") || "";
+//   clonedAgwera2.style.borderColor = localStorage.getItem(
+//     "clonedAgwera2BorderColor"
+//   );
 
-//   clonedScrollDiv.querySelectorAll(".valid6").forEach((validIcon) => {
-//     validIcon.style.display = "none";
-//   });
+//   if (clonedXarisxi.value == 1) {
+//     clonedXarisxiText.textContent = ",საშუალო სკოლის დიპლომი";
+//   } else if (clonedXarisxi.value == 2) {
+//     clonedXarisxiText.textContent = ",ზოგადსაგანმანათლებლო დიპლომი";
+//   } else if (clonedXarisxi.value == 3) {
+//     clonedXarisxiText.textContent = ",ბაკალავრი";
+//   } else if (clonedXarisxi.value == 4) {
+//     clonedXarisxiText.textContent = ",მაგისტრი";
+//   } else if (clonedXarisxi.value == 5) {
+//     clonedXarisxiText.textContent = ",დოქტორი";
+//   } else if (clonedXarisxi.value == 6) {
+//     clonedXarisxiText.textContent = ",ასოცირებული ხარისხი";
+//   } else if (clonedXarisxi.value == 7) {
+//     clonedXarisxiText.textContent = ",სტუდენტი";
+//   } else if (clonedXarisxi.value == 8) {
+//     clonedXarisxiText.textContent = ",კოლეჯი(ხარისიხს გარეშე)";
+//   } else if (clonedXarisxi.value == 9) {
+//     clonedXarisxiText.textContent = ",სხვა";
+//   }
 
-//   clonedScrollDiv.querySelectorAll(".invalid6").forEach((invalidIcon) => {
-//     invalidIcon.style.display = "none";
-//   });
+//   clonedSaswavlebeliText.textContent = clonedSaswavlebeli.value;
 
-//   clonedScrollDiv.querySelectorAll(".valid7").forEach((validIcon) => {
-//     validIcon.style.display = "none";
-//   });
+//   clonedDamtavrebisRicxvi2Text.textContent = clonedDamtavrebisRicxvi2.value;
 
-//   clonedScrollDiv.querySelectorAll(".invalid7").forEach((invalidIcon) => {
-//     invalidIcon.style.display = "none";
-//   });
-
-//   clonedTanamdeboba.addEventListener("input", function () {
-//     clonedTanamdebobaText.textContent = clonedTanamdeboba.value;
-//     if (clonedTanamdeboba.value.length >= 2) {
-//       clonedValid6.style.display = "block";
-//       clonedTanamdeboba.style.borderColor = "green";
-//       clonedInvalid6.style.display = "none";
-//     } else {
-//       clonedValid6.style.display = "none";
-//       clonedTanamdeboba.style.borderColor = "red";
-//       clonedInvalid6.style.display = "block";
-//     }
-//     localStorage.setItem("clonedValid6Display", clonedValid6.style.display);
-//     localStorage.setItem("clonedInvalid6Display", clonedInvalid6.style.display);
-//     localStorage.setItem(
-//       "clonedTanamdebobaBorderColor",
-//       clonedTanamdeboba.style.borderColor
-//     );
-//     localStorage.setItem("clonedTanamdebobaValue", clonedTanamdeboba.value);
-//   });
-
-//   clonedDamsaqmebeli.addEventListener("input", function () {
-//     clonedDamsaqmebeliText.textContent = ", " + clonedDamsaqmebeli.value;
-//     if (clonedDamsaqmebeli.value.length >= 2) {
-//       clonedValid7.style.display = "block";
-//       clonedDamsaqmebeli.style.borderColor = "green";
-//       clonedInvalid7.style.display = "none";
-//     } else {
-//       clonedValid7.style.display = "none";
-//       clonedDamsaqmebeli.style.borderColor = "red";
-//       clonedInvalid7.style.display = "block";
-//     }
-//     localStorage.setItem("clonedDamsaqmebeliValue", clonedDamsaqmebeli.value);
-//     localStorage.setItem("clonedValid7Display", clonedValid7.style.display);
-//     localStorage.setItem("clonedInvalid7Display", clonedInvalid7.style.display);
-//     localStorage.setItem(
-//       "clonedDamsaqmebeliBorderColor",
-//       clonedDamsaqmebeli.style.borderColor
-//     );
-//   });
-
-//   clonedDawyebisRicxvi.addEventListener("input", function () {
-//     clonedDawyebisRicxviText.textContent = clonedDawyebisRicxvi.value + " -";
-//     if (clonedDawyebisRicxvi.value.length > 0) {
-//       clonedDawyebisRicxvi.style.borderColor = "green";
-//     } else {
-//       clonedDawyebisRicxvi.style.borderColor = "red";
-//     }
-//     localStorage.setItem(
-//       "clonedDawyebisRicxviValue",
-//       clonedDawyebisRicxvi.value
-//     );
-//     localStorage.setItem(
-//       "clonedDawyebisRicxviBorderColor",
-//       clonedDawyebisRicxvi.style.borderColor
-//     );
-//   });
-
-//   clonedDamtavrebisRicxvi.addEventListener("input", function () {
-//     clonedDamtavrebisRicxviText.textContent = clonedDamtavrebisRicxvi.value;
-//     if (clonedDamtavrebisRicxvi.value.length > 0) {
-//       clonedDamtavrebisRicxvi.style.borderColor = "green";
-//     } else {
-//       clonedDamtavrebisRicxvi.style.borderColor = "red";
-//     }
-//     localStorage.setItem(
-//       "clonedDamtavrebisRicxviValue",
-//       clonedDamtavrebisRicxvi.value
-//     );
-//     localStorage.setItem(
-//       "clonedDamtavrebisRicxviBorderColor",
-//       clonedDamtavrebisRicxvi.style.borderColor
-//     );
-//   });
-
-//   clonedAgwera.addEventListener("input", function () {
-//     clonedAgweraText.textContent = clonedAgwera.value;
-//     if (clonedAgwera.value.length > 0) {
-//       clonedAgwera.style.borderColor = "green";
-//     } else {
-//       clonedAgwera.style.borderColor = "red";
-//     }
-//     localStorage.setItem("clonedAgweraValue", clonedAgwera.value);
-//     localStorage.setItem("clonedAgweraText_Value", clonedAgweraText.value);
-//     localStorage.setItem(
-//       "clonedAgweraBorderColor",
-//       clonedAgwera.style.borderColor
-//     );
-//   });
+//   clonedGanatlebisAgweraText.textContent = clonedAgwera2.value;
 // });

@@ -152,7 +152,7 @@ div.experience_underline{
     border: 1px solid #BCBCBC; 
 
 }
-button.meti_gamocdileba_button{
+button.meti_gamocdileba_button, .meti_ganatleba_button{
     padding: 18px 60px;
     background: #68a5eb;
     margin-left: 75px;
@@ -252,7 +252,7 @@ select#xarisxi{
     resize: none;
 }
 
-div.scroll_div2{
+div.scroll_div2_parent{
     height: 40vh;
     overflow-y: auto;
     
